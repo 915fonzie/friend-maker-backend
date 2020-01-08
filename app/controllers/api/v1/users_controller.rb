@@ -21,6 +21,7 @@ class Api::V1::UsersController < ApplicationController
 
     def update
         @user.update(user_params)
+        render json: @user
     end
 
     def destroy
