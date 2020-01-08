@@ -1,5 +1,5 @@
 class Api::V1::UsersController < ApplicationController
-    before_action :set_user, only: [:show, :edit, :update, :destroy]
+    before_action :set_user, only: [:show, :update, :destroy]
 
     def index
         @users = User.all
@@ -17,10 +17,6 @@ class Api::V1::UsersController < ApplicationController
     def create
         @user = User.create(user_params)
         render json: @user
-    end
-
-    def edit
-
     end
 
     def update
