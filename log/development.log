@@ -93,3 +93,987 @@ Migrating to RemoveUserInterestsTable (20200109030030)
   [1m[36mActiveRecord::InternalMetadata Load (13.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1891470732202648485)[0m
   [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (5.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Aircraft Spotting"], ["created_at", "2020-01-09 18:03:27.517822"], ["updated_at", "2020-01-09 18:03:27.517822"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nAirbrushing"], ["created_at", "2020-01-09 18:03:27.528816"], ["updated_at", "2020-01-09 18:03:27.528816"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nAirsofting"], ["created_at", "2020-01-09 18:03:27.532689"], ["updated_at", "2020-01-09 18:03:27.532689"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nActing"], ["created_at", "2020-01-09 18:03:27.536328"], ["updated_at", "2020-01-09 18:03:27.536328"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nAeromodeling"], ["created_at", "2020-01-09 18:03:27.539788"], ["updated_at", "2020-01-09 18:03:27.539788"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nAmateur Astronomy"], ["created_at", "2020-01-09 18:03:27.543416"], ["updated_at", "2020-01-09 18:03:27.543416"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nAmateur Radio"], ["created_at", "2020-01-09 18:03:27.547030"], ["updated_at", "2020-01-09 18:03:27.547030"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nAnimals/pets/dogs"], ["created_at", "2020-01-09 18:03:27.550617"], ["updated_at", "2020-01-09 18:03:27.550617"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (2.1ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nArchery"], ["created_at", "2020-01-09 18:03:27.554178"], ["updated_at", "2020-01-09 18:03:27.554178"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nArts"], ["created_at", "2020-01-09 18:03:27.560166"], ["updated_at", "2020-01-09 18:03:27.560166"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nAquarium (Freshwater & Saltwater)"], ["created_at", "2020-01-09 18:03:27.563906"], ["updated_at", "2020-01-09 18:03:27.563906"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nAstrology"], ["created_at", "2020-01-09 18:03:27.567385"], ["updated_at", "2020-01-09 18:03:27.567385"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nAstronomy"], ["created_at", "2020-01-09 18:03:27.571132"], ["updated_at", "2020-01-09 18:03:27.571132"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nBackgammon"], ["created_at", "2020-01-09 18:03:27.574664"], ["updated_at", "2020-01-09 18:03:27.574664"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nBadminton"], ["created_at", "2020-01-09 18:03:27.578161"], ["updated_at", "2020-01-09 18:03:27.578161"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nBaseball"], ["created_at", "2020-01-09 18:03:27.581677"], ["updated_at", "2020-01-09 18:03:27.581677"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nBase Jumping"], ["created_at", "2020-01-09 18:03:27.585274"], ["updated_at", "2020-01-09 18:03:27.585274"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nBasketball"], ["created_at", "2020-01-09 18:03:27.588903"], ["updated_at", "2020-01-09 18:03:27.588903"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nBeach/Sun tanning"], ["created_at", "2020-01-09 18:03:27.592568"], ["updated_at", "2020-01-09 18:03:27.592568"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.5ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nBeachcombing"], ["created_at", "2020-01-09 18:03:27.596587"], ["updated_at", "2020-01-09 18:03:27.596587"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nBeadwork"], ["created_at", "2020-01-09 18:03:27.601606"], ["updated_at", "2020-01-09 18:03:27.601606"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nBeatboxing"], ["created_at", "2020-01-09 18:03:27.606625"], ["updated_at", "2020-01-09 18:03:27.606625"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nBecoming A Child Advocate"], ["created_at", "2020-01-09 18:03:27.611757"], ["updated_at", "2020-01-09 18:03:27.611757"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nBell Ringing"], ["created_at", "2020-01-09 18:03:27.616656"], ["updated_at", "2020-01-09 18:03:27.616656"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nBelly Dancing"], ["created_at", "2020-01-09 18:03:27.621370"], ["updated_at", "2020-01-09 18:03:27.621370"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nBicycling"], ["created_at", "2020-01-09 18:03:27.625383"], ["updated_at", "2020-01-09 18:03:27.625383"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nBicycle Polo"], ["created_at", "2020-01-09 18:03:27.628977"], ["updated_at", "2020-01-09 18:03:27.628977"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nBird watching"], ["created_at", "2020-01-09 18:03:27.632508"], ["updated_at", "2020-01-09 18:03:27.632508"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nBirding"], ["created_at", "2020-01-09 18:03:27.636042"], ["updated_at", "2020-01-09 18:03:27.636042"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nBMX"], ["created_at", "2020-01-09 18:03:27.639593"], ["updated_at", "2020-01-09 18:03:27.639593"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nBlacksmithing"], ["created_at", "2020-01-09 18:03:27.643360"], ["updated_at", "2020-01-09 18:03:27.643360"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.6ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nBlogging"], ["created_at", "2020-01-09 18:03:27.646997"], ["updated_at", "2020-01-09 18:03:27.646997"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nBoard Games"], ["created_at", "2020-01-09 18:03:27.662125"], ["updated_at", "2020-01-09 18:03:27.662125"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nBoating"], ["created_at", "2020-01-09 18:03:27.665987"], ["updated_at", "2020-01-09 18:03:27.665987"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nBody Building"], ["created_at", "2020-01-09 18:03:27.669622"], ["updated_at", "2020-01-09 18:03:27.669622"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nBonsai Tree"], ["created_at", "2020-01-09 18:03:27.673154"], ["updated_at", "2020-01-09 18:03:27.673154"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nBookbinding"], ["created_at", "2020-01-09 18:03:27.676738"], ["updated_at", "2020-01-09 18:03:27.676738"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nBoomerangs"], ["created_at", "2020-01-09 18:03:27.680325"], ["updated_at", "2020-01-09 18:03:27.680325"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nBowling"], ["created_at", "2020-01-09 18:03:27.683914"], ["updated_at", "2020-01-09 18:03:27.683914"]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nBrewing Beer"], ["created_at", "2020-01-09 18:03:27.693426"], ["updated_at", "2020-01-09 18:03:27.693426"]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nBridge Building"], ["created_at", "2020-01-09 18:03:27.702724"], ["updated_at", "2020-01-09 18:03:27.702724"]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nBringing Food To The Disabled"], ["created_at", "2020-01-09 18:03:27.712615"], ["updated_at", "2020-01-09 18:03:27.712615"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nBuilding A House For Habitat For Humanity"], ["created_at", "2020-01-09 18:03:27.722479"], ["updated_at", "2020-01-09 18:03:27.722479"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nBuilding Dollhouses"], ["created_at", "2020-01-09 18:03:27.732401"], ["updated_at", "2020-01-09 18:03:27.732401"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nButterfly Watching"], ["created_at", "2020-01-09 18:03:27.736530"], ["updated_at", "2020-01-09 18:03:27.736530"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nButton Collecting"], ["created_at", "2020-01-09 18:03:27.740156"], ["updated_at", "2020-01-09 18:03:27.740156"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nCake Decorating"], ["created_at", "2020-01-09 18:03:27.743506"], ["updated_at", "2020-01-09 18:03:27.743506"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nCalligraphy"], ["created_at", "2020-01-09 18:03:27.746892"], ["updated_at", "2020-01-09 18:03:27.746892"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (1.8ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nCamping"], ["created_at", "2020-01-09 18:03:27.750212"], ["updated_at", "2020-01-09 18:03:27.750212"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nCandle Making"], ["created_at", "2020-01-09 18:03:27.755523"], ["updated_at", "2020-01-09 18:03:27.755523"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nCanoeing"], ["created_at", "2020-01-09 18:03:27.759401"], ["updated_at", "2020-01-09 18:03:27.759401"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.5ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nCartooning"], ["created_at", "2020-01-09 18:03:27.769220"], ["updated_at", "2020-01-09 18:03:27.769220"]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nCar Racing"], ["created_at", "2020-01-09 18:03:27.779458"], ["updated_at", "2020-01-09 18:03:27.779458"]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nCasino Gambling"], ["created_at", "2020-01-09 18:03:27.789022"], ["updated_at", "2020-01-09 18:03:27.789022"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nCave Diving"], ["created_at", "2020-01-09 18:03:27.792925"], ["updated_at", "2020-01-09 18:03:27.792925"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nCeramics"], ["created_at", "2020-01-09 18:03:27.796629"], ["updated_at", "2020-01-09 18:03:27.796629"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nCheerleading"], ["created_at", "2020-01-09 18:03:27.800225"], ["updated_at", "2020-01-09 18:03:27.800225"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nChess"], ["created_at", "2020-01-09 18:03:27.803660"], ["updated_at", "2020-01-09 18:03:27.803660"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nChurch/church activities"], ["created_at", "2020-01-09 18:03:27.807162"], ["updated_at", "2020-01-09 18:03:27.807162"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nCigar Smoking"], ["created_at", "2020-01-09 18:03:27.810695"], ["updated_at", "2020-01-09 18:03:27.810695"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nCloud Watching"], ["created_at", "2020-01-09 18:03:27.814159"], ["updated_at", "2020-01-09 18:03:27.814159"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nCoin Collecting"], ["created_at", "2020-01-09 18:03:27.817778"], ["updated_at", "2020-01-09 18:03:27.817778"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nCollecting"], ["created_at", "2020-01-09 18:03:27.821326"], ["updated_at", "2020-01-09 18:03:27.821326"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nCollecting Antiques"], ["created_at", "2020-01-09 18:03:27.824741"], ["updated_at", "2020-01-09 18:03:27.824741"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.5ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nCollecting Artwork"], ["created_at", "2020-01-09 18:03:27.828218"], ["updated_at", "2020-01-09 18:03:27.828218"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nCollecting Hats"], ["created_at", "2020-01-09 18:03:27.842385"], ["updated_at", "2020-01-09 18:03:27.842385"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nCollecting Music Albums"], ["created_at", "2020-01-09 18:03:27.847199"], ["updated_at", "2020-01-09 18:03:27.847199"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nCollecting RPM Records"], ["created_at", "2020-01-09 18:03:27.851353"], ["updated_at", "2020-01-09 18:03:27.851353"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nCollecting Sports Cards"], ["created_at", "2020-01-09 18:03:27.855681"], ["updated_at", "2020-01-09 18:03:27.855681"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nCollecting Swords"], ["created_at", "2020-01-09 18:03:27.859609"], ["updated_at", "2020-01-09 18:03:27.859609"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nColoring"], ["created_at", "2020-01-09 18:03:27.863341"], ["updated_at", "2020-01-09 18:03:27.863341"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nCompose Music"], ["created_at", "2020-01-09 18:03:27.866801"], ["updated_at", "2020-01-09 18:03:27.866801"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nComputer activities"], ["created_at", "2020-01-09 18:03:27.870174"], ["updated_at", "2020-01-09 18:03:27.870174"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nConworlding"], ["created_at", "2020-01-09 18:03:27.873572"], ["updated_at", "2020-01-09 18:03:27.873572"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nCooking"], ["created_at", "2020-01-09 18:03:27.877134"], ["updated_at", "2020-01-09 18:03:27.877134"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nCosplay"], ["created_at", "2020-01-09 18:03:27.880617"], ["updated_at", "2020-01-09 18:03:27.880617"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nCrafts"], ["created_at", "2020-01-09 18:03:27.884032"], ["updated_at", "2020-01-09 18:03:27.884032"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nCrafts"], ["created_at", "2020-01-09 18:03:27.887409"], ["updated_at", "2020-01-09 18:03:27.887409"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nCrochet"], ["created_at", "2020-01-09 18:03:27.890738"], ["updated_at", "2020-01-09 18:03:27.890738"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nCrocheting"], ["created_at", "2020-01-09 18:03:27.894091"], ["updated_at", "2020-01-09 18:03:27.894091"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nCross-Stitch"], ["created_at", "2020-01-09 18:03:27.897438"], ["updated_at", "2020-01-09 18:03:27.897438"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nCrossword Puzzles"], ["created_at", "2020-01-09 18:03:27.900759"], ["updated_at", "2020-01-09 18:03:27.900759"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nDancing"], ["created_at", "2020-01-09 18:03:27.904040"], ["updated_at", "2020-01-09 18:03:27.904040"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nDarts"], ["created_at", "2020-01-09 18:03:27.907487"], ["updated_at", "2020-01-09 18:03:27.907487"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nDiecast Collectibles"], ["created_at", "2020-01-09 18:03:27.910956"], ["updated_at", "2020-01-09 18:03:27.910956"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nDigital Photography"], ["created_at", "2020-01-09 18:03:27.914462"], ["updated_at", "2020-01-09 18:03:27.914462"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nDodgeball"], ["created_at", "2020-01-09 18:03:27.917883"], ["updated_at", "2020-01-09 18:03:27.917883"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nDolls"], ["created_at", "2020-01-09 18:03:27.921238"], ["updated_at", "2020-01-09 18:03:27.921238"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nDominoes"], ["created_at", "2020-01-09 18:03:27.926675"], ["updated_at", "2020-01-09 18:03:27.926675"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nDrawing"], ["created_at", "2020-01-09 18:03:27.930387"], ["updated_at", "2020-01-09 18:03:27.930387"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nDumpster Diving"], ["created_at", "2020-01-09 18:03:27.933776"], ["updated_at", "2020-01-09 18:03:27.933776"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nEating out"], ["created_at", "2020-01-09 18:03:27.937309"], ["updated_at", "2020-01-09 18:03:27.937309"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nEducational Courses"], ["created_at", "2020-01-09 18:03:27.940689"], ["updated_at", "2020-01-09 18:03:27.940689"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nElectronics"], ["created_at", "2020-01-09 18:03:27.944136"], ["updated_at", "2020-01-09 18:03:27.944136"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nEmbroidery"], ["created_at", "2020-01-09 18:03:27.947496"], ["updated_at", "2020-01-09 18:03:27.947496"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nEntertaining"], ["created_at", "2020-01-09 18:03:27.950864"], ["updated_at", "2020-01-09 18:03:27.950864"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nExercise"], ["created_at", "2020-01-09 18:03:27.954476"], ["updated_at", "2020-01-09 18:03:27.954476"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nFalconry"], ["created_at", "2020-01-09 18:03:27.957993"], ["updated_at", "2020-01-09 18:03:27.957993"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nFast cars"], ["created_at", "2020-01-09 18:03:27.971129"], ["updated_at", "2020-01-09 18:03:27.971129"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nFelting"], ["created_at", "2020-01-09 18:03:27.974861"], ["updated_at", "2020-01-09 18:03:27.974861"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nFencing"], ["created_at", "2020-01-09 18:03:27.978516"], ["updated_at", "2020-01-09 18:03:27.978516"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nFire Poi"], ["created_at", "2020-01-09 18:03:27.981985"], ["updated_at", "2020-01-09 18:03:27.981985"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nFishing"], ["created_at", "2020-01-09 18:03:27.985611"], ["updated_at", "2020-01-09 18:03:27.985611"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nFloorball"], ["created_at", "2020-01-09 18:03:27.989131"], ["updated_at", "2020-01-09 18:03:27.989131"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nFloral Arrangements"], ["created_at", "2020-01-09 18:03:27.992564"], ["updated_at", "2020-01-09 18:03:27.992564"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nFly Tying"], ["created_at", "2020-01-09 18:03:27.995902"], ["updated_at", "2020-01-09 18:03:27.995902"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nFootball"], ["created_at", "2020-01-09 18:03:27.999214"], ["updated_at", "2020-01-09 18:03:27.999214"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nFour Wheeling"], ["created_at", "2020-01-09 18:03:28.002701"], ["updated_at", "2020-01-09 18:03:28.002701"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nFreshwater Aquariums"], ["created_at", "2020-01-09 18:03:28.006108"], ["updated_at", "2020-01-09 18:03:28.006108"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (1.0ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nFrisbee Golf – Frolf"], ["created_at", "2020-01-09 18:03:28.009487"], ["updated_at", "2020-01-09 18:03:28.009487"]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nGames"], ["created_at", "2020-01-09 18:03:28.020253"], ["updated_at", "2020-01-09 18:03:28.020253"]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nGardening"], ["created_at", "2020-01-09 18:03:28.030112"], ["updated_at", "2020-01-09 18:03:28.030112"]]
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nGarage Saleing"], ["created_at", "2020-01-09 18:03:28.038761"], ["updated_at", "2020-01-09 18:03:28.038761"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nGenealogy"], ["created_at", "2020-01-09 18:03:28.042561"], ["updated_at", "2020-01-09 18:03:28.042561"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nGeocaching"], ["created_at", "2020-01-09 18:03:28.045816"], ["updated_at", "2020-01-09 18:03:28.045816"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nGhost Hunting"], ["created_at", "2020-01-09 18:03:28.049120"], ["updated_at", "2020-01-09 18:03:28.049120"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.7ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nGlowsticking"], ["created_at", "2020-01-09 18:03:28.052616"], ["updated_at", "2020-01-09 18:03:28.052616"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nGnoming"], ["created_at", "2020-01-09 18:03:28.056451"], ["updated_at", "2020-01-09 18:03:28.056451"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nGoing to movies"], ["created_at", "2020-01-09 18:03:28.059769"], ["updated_at", "2020-01-09 18:03:28.059769"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nGolf"], ["created_at", "2020-01-09 18:03:28.063042"], ["updated_at", "2020-01-09 18:03:28.063042"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nGo Kart Racing"], ["created_at", "2020-01-09 18:03:28.072966"], ["updated_at", "2020-01-09 18:03:28.072966"]]
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nGrip Strength"], ["created_at", "2020-01-09 18:03:28.084076"], ["updated_at", "2020-01-09 18:03:28.084076"]]
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nGuitar"], ["created_at", "2020-01-09 18:03:28.093150"], ["updated_at", "2020-01-09 18:03:28.093150"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nGunsmithing"], ["created_at", "2020-01-09 18:03:28.097076"], ["updated_at", "2020-01-09 18:03:28.097076"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nGun Collecting"], ["created_at", "2020-01-09 18:03:28.100564"], ["updated_at", "2020-01-09 18:03:28.100564"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nGymnastics"], ["created_at", "2020-01-09 18:03:28.103995"], ["updated_at", "2020-01-09 18:03:28.103995"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nGyotaku"], ["created_at", "2020-01-09 18:03:28.107625"], ["updated_at", "2020-01-09 18:03:28.107625"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nHandwriting Analysis"], ["created_at", "2020-01-09 18:03:28.111280"], ["updated_at", "2020-01-09 18:03:28.111280"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nHang gliding"], ["created_at", "2020-01-09 18:03:28.114941"], ["updated_at", "2020-01-09 18:03:28.114941"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nHerping"], ["created_at", "2020-01-09 18:03:28.118441"], ["updated_at", "2020-01-09 18:03:28.118441"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nHiking"], ["created_at", "2020-01-09 18:03:28.121888"], ["updated_at", "2020-01-09 18:03:28.121888"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nHome Brewing"], ["created_at", "2020-01-09 18:03:28.134633"], ["updated_at", "2020-01-09 18:03:28.134633"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nHome Repair"], ["created_at", "2020-01-09 18:03:28.138278"], ["updated_at", "2020-01-09 18:03:28.138278"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nHome Theater"], ["created_at", "2020-01-09 18:03:28.141769"], ["updated_at", "2020-01-09 18:03:28.141769"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nHorse riding"], ["created_at", "2020-01-09 18:03:28.145196"], ["updated_at", "2020-01-09 18:03:28.145196"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nHot air ballooning"], ["created_at", "2020-01-09 18:03:28.148636"], ["updated_at", "2020-01-09 18:03:28.148636"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nHula Hooping"], ["created_at", "2020-01-09 18:03:28.152060"], ["updated_at", "2020-01-09 18:03:28.152060"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nHunting"], ["created_at", "2020-01-09 18:03:28.155442"], ["updated_at", "2020-01-09 18:03:28.155442"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nIceskating"], ["created_at", "2020-01-09 18:03:28.158801"], ["updated_at", "2020-01-09 18:03:28.158801"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nIllusion"], ["created_at", "2020-01-09 18:03:28.162035"], ["updated_at", "2020-01-09 18:03:28.162035"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nImpersonations"], ["created_at", "2020-01-09 18:03:28.165304"], ["updated_at", "2020-01-09 18:03:28.165304"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nInternet"], ["created_at", "2020-01-09 18:03:28.168674"], ["updated_at", "2020-01-09 18:03:28.168674"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nInventing"], ["created_at", "2020-01-09 18:03:28.171952"], ["updated_at", "2020-01-09 18:03:28.171952"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nJet Engines"], ["created_at", "2020-01-09 18:03:28.176530"], ["updated_at", "2020-01-09 18:03:28.176530"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nJewelry Making"], ["created_at", "2020-01-09 18:03:28.179931"], ["updated_at", "2020-01-09 18:03:28.179931"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.2ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nJigsaw Puzzles"], ["created_at", "2020-01-09 18:03:28.183211"], ["updated_at", "2020-01-09 18:03:28.183211"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nJuggling"], ["created_at", "2020-01-09 18:03:28.186517"], ["updated_at", "2020-01-09 18:03:28.186517"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nKeep A Journal"], ["created_at", "2020-01-09 18:03:28.189851"], ["updated_at", "2020-01-09 18:03:28.189851"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nJump Roping"], ["created_at", "2020-01-09 18:03:28.193235"], ["updated_at", "2020-01-09 18:03:28.193235"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nKayaking"], ["created_at", "2020-01-09 18:03:28.196553"], ["updated_at", "2020-01-09 18:03:28.196553"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nKitchen Chemistry"], ["created_at", "2020-01-09 18:03:28.199823"], ["updated_at", "2020-01-09 18:03:28.199823"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nKites"], ["created_at", "2020-01-09 18:03:28.203096"], ["updated_at", "2020-01-09 18:03:28.203096"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nKite Boarding"], ["created_at", "2020-01-09 18:03:28.206788"], ["updated_at", "2020-01-09 18:03:28.206788"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nKnitting"], ["created_at", "2020-01-09 18:03:28.210413"], ["updated_at", "2020-01-09 18:03:28.210413"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nKnotting"], ["created_at", "2020-01-09 18:03:28.213881"], ["updated_at", "2020-01-09 18:03:28.213881"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nLasers"], ["created_at", "2020-01-09 18:03:28.217399"], ["updated_at", "2020-01-09 18:03:28.217399"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nLawn Darts"], ["created_at", "2020-01-09 18:03:28.220869"], ["updated_at", "2020-01-09 18:03:28.220869"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nLearn to Play Poker"], ["created_at", "2020-01-09 18:03:28.224376"], ["updated_at", "2020-01-09 18:03:28.224376"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (2.2ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nLearning A Foreign Language"], ["created_at", "2020-01-09 18:03:28.227776"], ["updated_at", "2020-01-09 18:03:28.227776"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nLearning An Instrument"], ["created_at", "2020-01-09 18:03:28.233610"], ["updated_at", "2020-01-09 18:03:28.233610"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nLearning To Pilot A Plane"], ["created_at", "2020-01-09 18:03:28.237104"], ["updated_at", "2020-01-09 18:03:28.237104"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nLeathercrafting"], ["created_at", "2020-01-09 18:03:28.240676"], ["updated_at", "2020-01-09 18:03:28.240676"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nLegos"], ["created_at", "2020-01-09 18:03:28.244029"], ["updated_at", "2020-01-09 18:03:28.244029"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.5ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nLetterboxing"], ["created_at", "2020-01-09 18:03:28.247449"], ["updated_at", "2020-01-09 18:03:28.247449"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nListening to music"], ["created_at", "2020-01-09 18:03:28.260237"], ["updated_at", "2020-01-09 18:03:28.260237"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nLocksport"], ["created_at", "2020-01-09 18:03:28.264592"], ["updated_at", "2020-01-09 18:03:28.264592"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nLacrosse"], ["created_at", "2020-01-09 18:03:28.268203"], ["updated_at", "2020-01-09 18:03:28.268203"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nMacramé"], ["created_at", "2020-01-09 18:03:28.271802"], ["updated_at", "2020-01-09 18:03:28.271802"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nMagic"], ["created_at", "2020-01-09 18:03:28.275339"], ["updated_at", "2020-01-09 18:03:28.275339"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nMaking Model Cars"], ["created_at", "2020-01-09 18:03:28.278829"], ["updated_at", "2020-01-09 18:03:28.278829"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nMarksmanship"], ["created_at", "2020-01-09 18:03:28.282192"], ["updated_at", "2020-01-09 18:03:28.282192"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nMartial Arts"], ["created_at", "2020-01-09 18:03:28.285497"], ["updated_at", "2020-01-09 18:03:28.285497"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nMatchstick Modeling"], ["created_at", "2020-01-09 18:03:28.288942"], ["updated_at", "2020-01-09 18:03:28.288942"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nMeditation"], ["created_at", "2020-01-09 18:03:28.292375"], ["updated_at", "2020-01-09 18:03:28.292375"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nMicroscopy"], ["created_at", "2020-01-09 18:03:28.295708"], ["updated_at", "2020-01-09 18:03:28.295708"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nMetal Detecting"], ["created_at", "2020-01-09 18:03:28.299035"], ["updated_at", "2020-01-09 18:03:28.299035"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nModel Railroading"], ["created_at", "2020-01-09 18:03:28.302472"], ["updated_at", "2020-01-09 18:03:28.302472"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nModel Rockets"], ["created_at", "2020-01-09 18:03:28.305847"], ["updated_at", "2020-01-09 18:03:28.305847"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nModeling Ships"], ["created_at", "2020-01-09 18:03:28.309182"], ["updated_at", "2020-01-09 18:03:28.309182"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nModels"], ["created_at", "2020-01-09 18:03:28.312555"], ["updated_at", "2020-01-09 18:03:28.312555"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nMotorcycles"], ["created_at", "2020-01-09 18:03:28.316045"], ["updated_at", "2020-01-09 18:03:28.316045"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nMountain Biking"], ["created_at", "2020-01-09 18:03:28.319405"], ["updated_at", "2020-01-09 18:03:28.319405"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nMountain Climbing"], ["created_at", "2020-01-09 18:03:28.322720"], ["updated_at", "2020-01-09 18:03:28.322720"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nMusical Instruments"], ["created_at", "2020-01-09 18:03:28.325997"], ["updated_at", "2020-01-09 18:03:28.325997"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nNail Art"], ["created_at", "2020-01-09 18:03:28.329339"], ["updated_at", "2020-01-09 18:03:28.329339"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nNeedlepoint"], ["created_at", "2020-01-09 18:03:28.332543"], ["updated_at", "2020-01-09 18:03:28.332543"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nOwning An Antique Car"], ["created_at", "2020-01-09 18:03:28.335926"], ["updated_at", "2020-01-09 18:03:28.335926"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nOrigami"], ["created_at", "2020-01-09 18:03:28.339625"], ["updated_at", "2020-01-09 18:03:28.339625"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nPainting"], ["created_at", "2020-01-09 18:03:28.343091"], ["updated_at", "2020-01-09 18:03:28.343091"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nPaintball"], ["created_at", "2020-01-09 18:03:28.346514"], ["updated_at", "2020-01-09 18:03:28.346514"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nPapermaking"], ["created_at", "2020-01-09 18:03:28.349812"], ["updated_at", "2020-01-09 18:03:28.349812"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nPapermache"], ["created_at", "2020-01-09 18:03:28.353127"], ["updated_at", "2020-01-09 18:03:28.353127"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nParachuting"], ["created_at", "2020-01-09 18:03:28.356486"], ["updated_at", "2020-01-09 18:03:28.356486"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nParagliding or Power Paragliding"], ["created_at", "2020-01-09 18:03:28.359793"], ["updated_at", "2020-01-09 18:03:28.359793"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nParkour"], ["created_at", "2020-01-09 18:03:28.363282"], ["updated_at", "2020-01-09 18:03:28.363282"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nPeople Watching"], ["created_at", "2020-01-09 18:03:28.366819"], ["updated_at", "2020-01-09 18:03:28.366819"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.5ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nPhotography"], ["created_at", "2020-01-09 18:03:28.370149"], ["updated_at", "2020-01-09 18:03:28.370149"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nPiano"], ["created_at", "2020-01-09 18:03:28.382989"], ["updated_at", "2020-01-09 18:03:28.382989"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nPinochle"], ["created_at", "2020-01-09 18:03:28.386837"], ["updated_at", "2020-01-09 18:03:28.386837"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nPlanking"], ["created_at", "2020-01-09 18:03:28.390370"], ["updated_at", "2020-01-09 18:03:28.390370"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.5ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nPlaying music"], ["created_at", "2020-01-09 18:03:28.393901"], ["updated_at", "2020-01-09 18:03:28.393901"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nPlaying team sports"], ["created_at", "2020-01-09 18:03:28.398166"], ["updated_at", "2020-01-09 18:03:28.398166"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nPole Dancing"], ["created_at", "2020-01-09 18:03:28.401761"], ["updated_at", "2020-01-09 18:03:28.401761"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nPottery"], ["created_at", "2020-01-09 18:03:28.405289"], ["updated_at", "2020-01-09 18:03:28.405289"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nPowerboking"], ["created_at", "2020-01-09 18:03:28.408713"], ["updated_at", "2020-01-09 18:03:28.408713"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nProtesting"], ["created_at", "2020-01-09 18:03:28.412043"], ["updated_at", "2020-01-09 18:03:28.412043"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nPuppetry"], ["created_at", "2020-01-09 18:03:28.415461"], ["updated_at", "2020-01-09 18:03:28.415461"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (2.0ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nPyrotechnics"], ["created_at", "2020-01-09 18:03:28.418771"], ["updated_at", "2020-01-09 18:03:28.418771"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nQuilting"], ["created_at", "2020-01-09 18:03:28.424557"], ["updated_at", "2020-01-09 18:03:28.424557"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nRacing Pigeons"], ["created_at", "2020-01-09 18:03:28.428166"], ["updated_at", "2020-01-09 18:03:28.428166"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nRafting"], ["created_at", "2020-01-09 18:03:28.431573"], ["updated_at", "2020-01-09 18:03:28.431573"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nRailfans"], ["created_at", "2020-01-09 18:03:28.435004"], ["updated_at", "2020-01-09 18:03:28.435004"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nRapping"], ["created_at", "2020-01-09 18:03:28.438540"], ["updated_at", "2020-01-09 18:03:28.438540"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nR/C Boats"], ["created_at", "2020-01-09 18:03:28.441960"], ["updated_at", "2020-01-09 18:03:28.441960"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nR/C Cars"], ["created_at", "2020-01-09 18:03:28.445261"], ["updated_at", "2020-01-09 18:03:28.445261"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nR/C Helicopters"], ["created_at", "2020-01-09 18:03:28.448529"], ["updated_at", "2020-01-09 18:03:28.448529"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nR/C Planes"], ["created_at", "2020-01-09 18:03:28.451794"], ["updated_at", "2020-01-09 18:03:28.451794"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nReading"], ["created_at", "2020-01-09 18:03:28.455108"], ["updated_at", "2020-01-09 18:03:28.455108"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nReading To The Elderly"], ["created_at", "2020-01-09 18:03:28.458474"], ["updated_at", "2020-01-09 18:03:28.458474"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nRelaxing"], ["created_at", "2020-01-09 18:03:28.461752"], ["updated_at", "2020-01-09 18:03:28.461752"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nRenaissance Faire"], ["created_at", "2020-01-09 18:03:28.465667"], ["updated_at", "2020-01-09 18:03:28.465667"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nRenting movies"], ["created_at", "2020-01-09 18:03:28.468962"], ["updated_at", "2020-01-09 18:03:28.468962"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nRescuing Abused Or Abandoned Animals"], ["created_at", "2020-01-09 18:03:28.472404"], ["updated_at", "2020-01-09 18:03:28.472404"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nRobotics"], ["created_at", "2020-01-09 18:03:28.475752"], ["updated_at", "2020-01-09 18:03:28.475752"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nRock Balancing"], ["created_at", "2020-01-09 18:03:28.479024"], ["updated_at", "2020-01-09 18:03:28.479024"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nRock Collecting"], ["created_at", "2020-01-09 18:03:28.482641"], ["updated_at", "2020-01-09 18:03:28.482641"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nRockets"], ["created_at", "2020-01-09 18:03:28.486450"], ["updated_at", "2020-01-09 18:03:28.486450"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nRoleplaying"], ["created_at", "2020-01-09 18:03:28.489908"], ["updated_at", "2020-01-09 18:03:28.489908"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nRunning"], ["created_at", "2020-01-09 18:03:28.493278"], ["updated_at", "2020-01-09 18:03:28.493278"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nSaltwater Aquariums"], ["created_at", "2020-01-09 18:03:28.496755"], ["updated_at", "2020-01-09 18:03:28.496755"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nSand Castles"], ["created_at", "2020-01-09 18:03:28.509697"], ["updated_at", "2020-01-09 18:03:28.509697"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nScrapbooking"], ["created_at", "2020-01-09 18:03:28.513653"], ["updated_at", "2020-01-09 18:03:28.513653"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nScuba Diving"], ["created_at", "2020-01-09 18:03:28.517209"], ["updated_at", "2020-01-09 18:03:28.517209"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nSelf Defense"], ["created_at", "2020-01-09 18:03:28.520656"], ["updated_at", "2020-01-09 18:03:28.520656"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nSewing"], ["created_at", "2020-01-09 18:03:28.524253"], ["updated_at", "2020-01-09 18:03:28.524253"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nShark Fishing"], ["created_at", "2020-01-09 18:03:28.527724"], ["updated_at", "2020-01-09 18:03:28.527724"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nSkeet Shooting"], ["created_at", "2020-01-09 18:03:28.531148"], ["updated_at", "2020-01-09 18:03:28.531148"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nSkiing"], ["created_at", "2020-01-09 18:03:28.534652"], ["updated_at", "2020-01-09 18:03:28.534652"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nShopping"], ["created_at", "2020-01-09 18:03:28.538013"], ["updated_at", "2020-01-09 18:03:28.538013"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nSinging In Choir"], ["created_at", "2020-01-09 18:03:28.541287"], ["updated_at", "2020-01-09 18:03:28.541287"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nSkateboarding"], ["created_at", "2020-01-09 18:03:28.544566"], ["updated_at", "2020-01-09 18:03:28.544566"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nSketching"], ["created_at", "2020-01-09 18:03:28.547967"], ["updated_at", "2020-01-09 18:03:28.547967"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nSky Diving"], ["created_at", "2020-01-09 18:03:28.551295"], ["updated_at", "2020-01-09 18:03:28.551295"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nSlack Lining"], ["created_at", "2020-01-09 18:03:28.554662"], ["updated_at", "2020-01-09 18:03:28.554662"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.2ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nSleeping"], ["created_at", "2020-01-09 18:03:28.558012"], ["updated_at", "2020-01-09 18:03:28.558012"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nSlingshots"], ["created_at", "2020-01-09 18:03:28.561305"], ["updated_at", "2020-01-09 18:03:28.561305"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nSlot Car Racing"], ["created_at", "2020-01-09 18:03:28.564511"], ["updated_at", "2020-01-09 18:03:28.564511"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (2.0ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nSnorkeling"], ["created_at", "2020-01-09 18:03:28.567754"], ["updated_at", "2020-01-09 18:03:28.567754"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nSnowboarding"], ["created_at", "2020-01-09 18:03:28.573280"], ["updated_at", "2020-01-09 18:03:28.573280"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nSoap Making"], ["created_at", "2020-01-09 18:03:28.576903"], ["updated_at", "2020-01-09 18:03:28.576903"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nSoccer"], ["created_at", "2020-01-09 18:03:28.580396"], ["updated_at", "2020-01-09 18:03:28.580396"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nSocializing with friends/neighbors"], ["created_at", "2020-01-09 18:03:28.583874"], ["updated_at", "2020-01-09 18:03:28.583874"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nSpeed Cubing (rubix cube)"], ["created_at", "2020-01-09 18:03:28.587282"], ["updated_at", "2020-01-09 18:03:28.587282"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nSpelunkering"], ["created_at", "2020-01-09 18:03:28.590731"], ["updated_at", "2020-01-09 18:03:28.590731"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nSpending time with family/kids"], ["created_at", "2020-01-09 18:03:28.594044"], ["updated_at", "2020-01-09 18:03:28.594044"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nStamp Collecting"], ["created_at", "2020-01-09 18:03:28.597343"], ["updated_at", "2020-01-09 18:03:28.597343"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nStorm Chasing"], ["created_at", "2020-01-09 18:03:28.600712"], ["updated_at", "2020-01-09 18:03:28.600712"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nStorytelling"], ["created_at", "2020-01-09 18:03:28.604025"], ["updated_at", "2020-01-09 18:03:28.604025"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nString Figures"], ["created_at", "2020-01-09 18:03:28.607524"], ["updated_at", "2020-01-09 18:03:28.607524"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nSurfing"], ["created_at", "2020-01-09 18:03:28.610956"], ["updated_at", "2020-01-09 18:03:28.610956"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nSurf Fishing"], ["created_at", "2020-01-09 18:03:28.614335"], ["updated_at", "2020-01-09 18:03:28.614335"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nSurvival"], ["created_at", "2020-01-09 18:03:28.617724"], ["updated_at", "2020-01-09 18:03:28.617724"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nSwimming"], ["created_at", "2020-01-09 18:03:28.621206"], ["updated_at", "2020-01-09 18:03:28.621206"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nTatting"], ["created_at", "2020-01-09 18:03:28.633934"], ["updated_at", "2020-01-09 18:03:28.633934"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nTaxidermy"], ["created_at", "2020-01-09 18:03:28.637625"], ["updated_at", "2020-01-09 18:03:28.637625"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nTea Tasting"], ["created_at", "2020-01-09 18:03:28.641340"], ["updated_at", "2020-01-09 18:03:28.641340"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nTennis"], ["created_at", "2020-01-09 18:03:28.644872"], ["updated_at", "2020-01-09 18:03:28.644872"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nTesla Coils"], ["created_at", "2020-01-09 18:03:28.648331"], ["updated_at", "2020-01-09 18:03:28.648331"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nTetris"], ["created_at", "2020-01-09 18:03:28.651707"], ["updated_at", "2020-01-09 18:03:28.651707"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nTexting"], ["created_at", "2020-01-09 18:03:28.655086"], ["updated_at", "2020-01-09 18:03:28.655086"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nTextiles"], ["created_at", "2020-01-09 18:03:28.658434"], ["updated_at", "2020-01-09 18:03:28.658434"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nTombstone Rubbing"], ["created_at", "2020-01-09 18:03:28.661728"], ["updated_at", "2020-01-09 18:03:28.661728"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nTool Collecting"], ["created_at", "2020-01-09 18:03:28.665105"], ["updated_at", "2020-01-09 18:03:28.665105"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nToy Collecting"], ["created_at", "2020-01-09 18:03:28.668548"], ["updated_at", "2020-01-09 18:03:28.668548"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nTrain Collecting"], ["created_at", "2020-01-09 18:03:28.671950"], ["updated_at", "2020-01-09 18:03:28.671950"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nTrain Spotting"], ["created_at", "2020-01-09 18:03:28.675468"], ["updated_at", "2020-01-09 18:03:28.675468"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nTraveling"], ["created_at", "2020-01-09 18:03:28.679054"], ["updated_at", "2020-01-09 18:03:28.679054"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nTreasure Hunting"], ["created_at", "2020-01-09 18:03:28.682727"], ["updated_at", "2020-01-09 18:03:28.682727"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nTrekkie"], ["created_at", "2020-01-09 18:03:28.686155"], ["updated_at", "2020-01-09 18:03:28.686155"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nTutoring Children"], ["created_at", "2020-01-09 18:03:28.689438"], ["updated_at", "2020-01-09 18:03:28.689438"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nTV watching"], ["created_at", "2020-01-09 18:03:28.692776"], ["updated_at", "2020-01-09 18:03:28.692776"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nUltimate Frisbee"], ["created_at", "2020-01-09 18:03:28.696102"], ["updated_at", "2020-01-09 18:03:28.696102"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nUrban Exploration"], ["created_at", "2020-01-09 18:03:28.699479"], ["updated_at", "2020-01-09 18:03:28.699479"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nVideo Games"], ["created_at", "2020-01-09 18:03:28.702884"], ["updated_at", "2020-01-09 18:03:28.702884"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nViolin"], ["created_at", "2020-01-09 18:03:28.706385"], ["updated_at", "2020-01-09 18:03:28.706385"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nVolunteer"], ["created_at", "2020-01-09 18:03:28.709797"], ["updated_at", "2020-01-09 18:03:28.709797"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nWalking"], ["created_at", "2020-01-09 18:03:28.713186"], ["updated_at", "2020-01-09 18:03:28.713186"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (2.1ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nWarhammer"], ["created_at", "2020-01-09 18:03:28.716504"], ["updated_at", "2020-01-09 18:03:28.716504"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nWatching sporting events"], ["created_at", "2020-01-09 18:03:28.722264"], ["updated_at", "2020-01-09 18:03:28.722264"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nWeather Watcher"], ["created_at", "2020-01-09 18:03:28.725847"], ["updated_at", "2020-01-09 18:03:28.725847"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nWeightlifting"], ["created_at", "2020-01-09 18:03:28.729126"], ["updated_at", "2020-01-09 18:03:28.729126"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nWindsurfing"], ["created_at", "2020-01-09 18:03:28.732452"], ["updated_at", "2020-01-09 18:03:28.732452"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nWine Making"], ["created_at", "2020-01-09 18:03:28.735961"], ["updated_at", "2020-01-09 18:03:28.735961"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nWingsuit Flying"], ["created_at", "2020-01-09 18:03:28.739451"], ["updated_at", "2020-01-09 18:03:28.739451"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nWoodworking"], ["created_at", "2020-01-09 18:03:28.742885"], ["updated_at", "2020-01-09 18:03:28.742885"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nWorking In A Food Pantry"], ["created_at", "2020-01-09 18:03:28.746309"], ["updated_at", "2020-01-09 18:03:28.746309"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (1.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nWorking on cars"], ["created_at", "2020-01-09 18:03:28.759078"], ["updated_at", "2020-01-09 18:03:28.759078"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nWorld Record Breaking"], ["created_at", "2020-01-09 18:03:28.764072"], ["updated_at", "2020-01-09 18:03:28.764072"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nWrestling"], ["created_at", "2020-01-09 18:03:28.767924"], ["updated_at", "2020-01-09 18:03:28.767924"]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nWriting"], ["created_at", "2020-01-09 18:03:28.777329"], ["updated_at", "2020-01-09 18:03:28.777329"]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nWriting Music"], ["created_at", "2020-01-09 18:03:28.786983"], ["updated_at", "2020-01-09 18:03:28.786983"]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nWriting Songs"], ["created_at", "2020-01-09 18:03:28.796405"], ["updated_at", "2020-01-09 18:03:28.796405"]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.3ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nYoga"], ["created_at", "2020-01-09 18:03:28.805681"], ["updated_at", "2020-01-09 18:03:28.805681"]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nYoYo"], ["created_at", "2020-01-09 18:03:28.815134"], ["updated_at", "2020-01-09 18:03:28.815134"]]
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nZiplining"], ["created_at", "2020-01-09 18:03:28.823637"], ["updated_at", "2020-01-09 18:03:28.823637"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInterest Create (0.4ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "\nZumba\n"], ["created_at", "2020-01-09 18:03:28.827789"], ["updated_at", "2020-01-09 18:03:28.827789"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mInterest Load (0.7ms)[0m  [1m[34mSELECT "interests".* FROM "interests" ORDER BY "interests"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (24.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Alfonso"], ["last_name", "Pruneda"], ["username", "fonzie"], ["password_digest", "pato"], ["created_at", "2020-01-09 18:25:24.828557"], ["updated_at", "2020-01-09 18:25:24.828557"]]
+  [1m[35m (17.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (30.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3 LIMIT $4[0m  [["taggable_id", 1], ["taggable_type", "User"], ["context", "interests"], ["LIMIT", 11]]
+  [1m[36mActsAsTaggableOn::Tag Load (1.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3 LIMIT $4[0m  [["taggable_id", 1], ["taggable_type", "User"], ["context", "interests"], ["LIMIT", 11]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (1.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (8.0ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1 WHERE "users"."id" = $2[0m  [["updated_at", "2020-01-09 18:27:46.086387"], ["id", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (1.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE (LOWER(name) = LOWER('yoga'))[0m
+  [1m[36mActsAsTaggableOn::Tag Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" WHERE "tags"."name" = $1 LIMIT $2[0m  [["name", "Yoga"], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tag Create (2.9ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Yoga"], ["created_at", "2020-01-09 18:27:46.104260"], ["updated_at", "2020-01-09 18:27:46.104260"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tagging Exists? (6.3ms)[0m  [1m[34mSELECT 1 AS one FROM "taggings" WHERE "taggings"."tag_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."taggable_id" = $3 AND "taggings"."context" = $4 AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL LIMIT $5[0m  [["tag_id", 1], ["taggable_type", "User"], ["taggable_id", 1], ["context", "interests"], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tagging Create (17.0ms)[0m  [1m[32mINSERT INTO "taggings" ("tag_id", "taggable_type", "taggable_id", "context", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["tag_id", 1], ["taggable_type", "User"], ["taggable_id", 1], ["context", "interests"], ["created_at", "2020-01-09 18:27:46.141843"]]
+  [1m[36mActsAsTaggableOn::Tag Update All (1.6ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + $1 WHERE "tags"."id" = $2[0m  [["taggings_count", 1], ["id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (1.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3 LIMIT $4[0m  [["taggable_id", 1], ["taggable_type", "User"], ["context", "interests"], ["LIMIT", 11]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tagging Destroy (0.3ms)[0m  [1m[31mDELETE FROM "taggings" WHERE "taggings"."id" = $1[0m  [["id", 1]]
+  [1m[36mActsAsTaggableOn::Tag Update All (0.4ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) - $1 WHERE "tags"."id" = $2[0m  [["taggings_count", 1], ["id", 1]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "User"], ["context", "tags"]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.5ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "User"], ["context", "interests"]]
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Alfonso"], ["last_name", "Pruneda"], ["username", "fonzie"], ["password_digest", "pato"], ["created_at", "2020-01-09 18:30:51.769752"], ["updated_at", "2020-01-09 18:30:51.769752"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE (LOWER(name) = LOWER('yoga') OR LOWER(name) = LOWER('ziplining'))[0m
+  [1m[36mActsAsTaggableOn::Tag Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" WHERE "tags"."name" = $1 LIMIT $2[0m  [["name", "Ziplining"], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tag Create (0.4ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ziplining"], ["created_at", "2020-01-09 18:30:51.774803"], ["updated_at", "2020-01-09 18:30:51.774803"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tagging Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "taggings" WHERE "taggings"."tag_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."taggable_id" = $3 AND "taggings"."context" = $4 AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL LIMIT $5[0m  [["tag_id", 1], ["taggable_type", "User"], ["taggable_id", 2], ["context", "interests"], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tagging Create (9.6ms)[0m  [1m[32mINSERT INTO "taggings" ("tag_id", "taggable_type", "taggable_id", "context", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["tag_id", 1], ["taggable_type", "User"], ["taggable_id", 2], ["context", "interests"], ["created_at", "2020-01-09 18:30:51.792177"]]
+  [1m[36mActsAsTaggableOn::Tag Update All (0.4ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + $1 WHERE "tags"."id" = $2[0m  [["taggings_count", 1], ["id", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tagging Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "taggings" WHERE "taggings"."tag_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."taggable_id" = $3 AND "taggings"."context" = $4 AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL LIMIT $5[0m  [["tag_id", 2], ["taggable_type", "User"], ["taggable_id", 2], ["context", "interests"], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tagging Create (0.7ms)[0m  [1m[32mINSERT INTO "taggings" ("tag_id", "taggable_type", "taggable_id", "context", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["tag_id", 2], ["taggable_type", "User"], ["taggable_id", 2], ["context", "interests"], ["created_at", "2020-01-09 18:30:51.810661"]]
+  [1m[36mActsAsTaggableOn::Tag Update All (0.4ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + $1 WHERE "tags"."id" = $2[0m  [["taggings_count", 1], ["id", 2]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3 LIMIT $4[0m  [["taggable_id", 2], ["taggable_type", "User"], ["context", "interests"], ["LIMIT", 11]]
+  [1m[36mActsAsTaggableOn::Tag Load (1.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActsAsTaggableOn::Tagging Load (0.5ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tagging Destroy (0.4ms)[0m  [1m[31mDELETE FROM "taggings" WHERE "taggings"."id" = $1[0m  [["id", 2]]
+  [1m[36mActsAsTaggableOn::Tag Update All (0.3ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) - $1 WHERE "tags"."id" = $2[0m  [["taggings_count", 1], ["id", 1]]
+  [1m[36mActsAsTaggableOn::Tagging Destroy (0.3ms)[0m  [1m[31mDELETE FROM "taggings" WHERE "taggings"."id" = $1[0m  [["id", 3]]
+  [1m[36mActsAsTaggableOn::Tag Update All (0.5ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) - $1 WHERE "tags"."id" = $2[0m  [["taggings_count", 1], ["id", 2]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "User"], ["context", "tags"]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.5ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "User"], ["context", "interests"]]
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
