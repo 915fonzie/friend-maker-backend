@@ -1077,3 +1077,1448 @@ Migrating to RemoveUserInterestsTable (20200109030030)
   [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users"[0m
   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "alfonso"], ["password_digest", "1111"], ["created_at", "2020-01-09 18:39:58.913141"], ["updated_at", "2020-01-09 18:39:58.913141"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE (LOWER(name) = LOWER('yoga') OR LOWER(name) = LOWER('ziplining'))[0m
+  [1m[36mActsAsTaggableOn::Tag Load (2.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tagging Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "taggings" WHERE "taggings"."tag_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."taggable_id" = $3 AND "taggings"."context" = $4 AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL LIMIT $5[0m  [["tag_id", 1], ["taggable_type", "User"], ["taggable_id", 3], ["context", "interests"], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tagging Create (0.9ms)[0m  [1m[32mINSERT INTO "taggings" ("tag_id", "taggable_type", "taggable_id", "context", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["tag_id", 1], ["taggable_type", "User"], ["taggable_id", 3], ["context", "interests"], ["created_at", "2020-01-09 18:39:58.943307"]]
+  [1m[36mActsAsTaggableOn::Tag Update All (0.4ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + $1 WHERE "tags"."id" = $2[0m  [["taggings_count", 1], ["id", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tagging Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "taggings" WHERE "taggings"."tag_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."taggable_id" = $3 AND "taggings"."context" = $4 AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL LIMIT $5[0m  [["tag_id", 2], ["taggable_type", "User"], ["taggable_id", 3], ["context", "interests"], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tagging Create (6.7ms)[0m  [1m[32mINSERT INTO "taggings" ("tag_id", "taggable_type", "taggable_id", "context", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["tag_id", 2], ["taggable_type", "User"], ["taggable_id", 3], ["context", "interests"], ["created_at", "2020-01-09 18:39:58.953662"]]
+  [1m[36mActsAsTaggableOn::Tag Update All (0.4ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + $1 WHERE "tags"."id" = $2[0m  [["taggings_count", 1], ["id", 2]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "alfo"], ["password_digest", "1111"], ["created_at", "2020-01-09 18:40:36.104344"], ["updated_at", "2020-01-09 18:40:36.104344"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE (LOWER(name) = LOWER('ziplining'))[0m
+  [1m[36mActsAsTaggableOn::Tag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tagging Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "taggings" WHERE "taggings"."tag_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."taggable_id" = $3 AND "taggings"."context" = $4 AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL LIMIT $5[0m  [["tag_id", 2], ["taggable_type", "User"], ["taggable_id", 4], ["context", "interests"], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tagging Create (0.8ms)[0m  [1m[32mINSERT INTO "taggings" ("tag_id", "taggable_type", "taggable_id", "context", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["tag_id", 2], ["taggable_type", "User"], ["taggable_id", 4], ["context", "interests"], ["created_at", "2020-01-09 18:40:36.121169"]]
+  [1m[36mActsAsTaggableOn::Tag Update All (0.4ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + $1 WHERE "tags"."id" = $2[0m  [["taggings_count", 1], ["id", 2]]
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "fozo"], ["password_digest", "1111"], ["created_at", "2020-01-09 18:41:19.222570"], ["updated_at", "2020-01-09 18:41:19.222570"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE (LOWER(name) = LOWER('yoga'))[0m
+  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tagging Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "taggings" WHERE "taggings"."tag_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."taggable_id" = $3 AND "taggings"."context" = $4 AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL LIMIT $5[0m  [["tag_id", 1], ["taggable_type", "User"], ["taggable_id", 5], ["context", "interests"], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tagging Create (0.7ms)[0m  [1m[32mINSERT INTO "taggings" ("tag_id", "taggable_type", "taggable_id", "context", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["tag_id", 1], ["taggable_type", "User"], ["taggable_id", 5], ["context", "interests"], ["created_at", "2020-01-09 18:41:19.236290"]]
+  [1m[36mActsAsTaggableOn::Tag Update All (8.3ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + $1 WHERE "tags"."id" = $2[0m  [["taggings_count", 1], ["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mActsAsTaggableOn::Tag Load (1.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  [1m[36mUser Load (16.6ms)[0m  [1m[34mSELECT users.*, COUNT(tags.id) AS count FROM users, tags, taggings WHERE ("users"."id" != 3 AND users.id = taggings.taggable_id AND taggings.taggable_type = 'User' AND taggings.tag_id = tags.id AND tags.name IN ('Yoga','Ziplining') AND taggings.context = 'interests') GROUP BY users.id, users.first_name, users.last_name, users.username, users.password_digest, users.email, users.bio, users.ideal_friend_bio, users.created_at, users.updated_at ORDER BY count DESC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mActsAsTaggableOn::Tag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT users.*, COUNT(tags.id) AS count FROM users, tags, taggings WHERE ("users"."id" != 4 AND users.id = taggings.taggable_id AND taggings.taggable_type = 'User' AND taggings.tag_id = tags.id AND tags.name IN ('Ziplining') AND taggings.context = 'interests') GROUP BY users.id, users.first_name, users.last_name, users.username, users.password_digest, users.email, users.bio, users.ideal_friend_bio, users.created_at, users.updated_at ORDER BY count DESC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mActsAsTaggableOn::Tag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT users.*, COUNT(tags.id) AS count FROM users, tags, taggings WHERE ("users"."id" != 5 AND users.id = taggings.taggable_id AND taggings.taggable_type = 'User' AND taggings.tag_id = tags.id AND tags.name IN ('Yoga') AND taggings.context = 'interests') GROUP BY users.id, users.first_name, users.last_name, users.username, users.password_digest, users.email, users.bio, users.ideal_friend_bio, users.created_at, users.updated_at ORDER BY count DESC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mActsAsTaggableOn::Tag Load (2.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3 LIMIT $4[0m  [["taggable_id", 3], ["taggable_type", "User"], ["context", "interests"], ["LIMIT", 11]]
+  [1m[36mUser Load (28.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE EXISTS (SELECT * FROM "taggings" WHERE "taggings"."taggable_id" = "users"."id" AND "taggings"."taggable_type" = 'User' AND "taggings"."tag_id" IN (SELECT "tags"."id" FROM "tags" WHERE (LOWER("tags"."name") ILIKE 'yoga' ESCAPE '!'))) LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE EXISTS (SELECT * FROM "taggings" WHERE "taggings"."taggable_id" = "users"."id" AND "taggings"."taggable_type" = 'User' AND "taggings"."tag_id" IN (SELECT "tags"."id" FROM "tags" WHERE (LOWER("tags"."name") ILIKE 'yoga' ESCAPE '!' OR LOWER("tags"."name") ILIKE 'ziplining' ESCAPE '!'))) LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/find?filtered_interests=[%22Yoga,%20Ziplining%22]" for ::1 at 2020-01-09 13:32:15 -0800
+  [1m[35m (15.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/find"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/find_match?filtered_interests=[%22Yoga,%20Ziplining%22]" for ::1 at 2020-01-09 13:32:36 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/find_match"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/find_matches?filtered_interests=[%22Yoga,%20Ziplining%22]" for ::1 at 2020-01-09 13:32:48 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/find_matches"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/find_matches" for ::1 at 2020-01-09 13:33:09 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/find_matches"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/find_matches" for ::1 at 2020-01-09 13:33:44 -0800
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/find_matches"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/find_matches" for ::1 at 2020-01-09 13:34:05 -0800
+  
+ActionController::RoutingError (uninitialized constant Api::V1::UserController
+Did you mean?  Api::V1::UsersController):
+  
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:284:in `const_get'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:284:in `block in constantize'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.2.1) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.2.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:45:in `controller'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.8) lib/rack/etag.rb:25:in `call'
+rack (2.0.8) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.8) lib/rack/head.rb:12:in `call'
+activerecord (6.0.2.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/user/find_matches" for ::1 at 2020-01-09 13:34:44 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/user/find_matches"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/users/find_matches" for ::1 at 2020-01-09 13:34:48 -0800
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"find_matches"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:41:in `set_user'
+Completed 200 OK in 55ms (Views: 0.1ms | ActiveRecord: 10.8ms | Allocations: 11790)
+
+
+Started GET "/api/v1/users/find_matches?filtered_interests=[%22Yoga,%20Ziplining%22]" for ::1 at 2020-01-09 13:34:58 -0800
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"filtered_interests"=>"[\"Yoga, Ziplining\"]", "id"=>"find_matches"}
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:41:in `set_user'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 4.2ms | Allocations: 607)
+
+
+Started GET "/api/v1/users/find_matches?filtered_interests=[%22Yoga,%20Ziplining%22]" for ::1 at 2020-01-09 13:35:35 -0800
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"filtered_interests"=>"[\"Yoga, Ziplining\"]", "id"=>"find_matches"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:42:in `set_user'
+Completed 200 OK in 21ms (Views: 0.1ms | ActiveRecord: 2.9ms | Allocations: 8473)
+
+
+Started GET "/api/v1/users/find_matches?filtered_interests=[%22Yoga%22]" for ::1 at 2020-01-09 13:35:53 -0800
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"filtered_interests"=>"[\"Yoga\"]", "id"=>"find_matches"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:42:in `set_user'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 621)
+
+
+Started GET "/api/v1/users/find_matches?filtered_interests=Yoga" for ::1 at 2020-01-09 13:36:00 -0800
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"filtered_interests"=>"Yoga", "id"=>"find_matches"}
+  [1m[36mUser Load (14.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:42:in `set_user'
+Completed 200 OK in 17ms (Views: 0.2ms | ActiveRecord: 14.5ms | Allocations: 606)
+
+
+Started GET "/api/v1/users/find_matches?filtered_interests=Yoga" for ::1 at 2020-01-09 13:36:39 -0800
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"filtered_interests"=>"Yoga", "id"=>"find_matches"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:42:in `set_user'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 606)
+
+
+Started GET "/api/v1/users/find_matches?filtered_interests=Yoga" for ::1 at 2020-01-09 13:37:14 -0800
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"filtered_interests"=>"Yoga", "id"=>"find_matches"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:42:in `set_user'
+Completed 200 OK in 19ms (Views: 0.1ms | ActiveRecord: 2.7ms | Allocations: 8383)
+
+
+Started GET "/api/v1/user/find_matches?filtered_interests=Yoga" for ::1 at 2020-01-09 13:37:27 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/user/find_matches"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/find_matches?filtered_interests=Yoga" for ::1 at 2020-01-09 13:38:01 -0800
+  
+ActionController::RoutingError (uninitialized constant Api::V1::UserController
+Did you mean?  Api::V1::UsersController):
+  
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:284:in `const_get'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:284:in `block in constantize'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.2.1) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.2.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:45:in `controller'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.8) lib/rack/etag.rb:25:in `call'
+rack (2.0.8) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.8) lib/rack/head.rb:12:in `call'
+activerecord (6.0.2.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/find_matches?filtered_interests=Yoga" for ::1 at 2020-01-09 13:38:57 -0800
+Processing by Api::V1::UserController#find as */*
+  Parameters: {"filtered_interests"=>"Yoga"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/user_controller.rb:42:in `set_user'
+Completed 200 OK in 47ms (Views: 0.2ms | ActiveRecord: 15.6ms | Allocations: 11577)
+
+
+Started GET "/api/v1/find_matches?filtered_interests=Yoga" for ::1 at 2020-01-09 13:39:15 -0800
+Processing by Api::V1::UserController#find as */*
+  Parameters: {"filtered_interests"=>"Yoga"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/user_controller.rb:41:in `set_user'
+  [1m[36mUser Load (18.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE EXISTS (SELECT * FROM "taggings" WHERE "taggings"."taggable_id" = "users"."id" AND "taggings"."taggable_type" = 'User' AND "taggings"."tag_id" IN (SELECT "tags"."id" FROM "tags" WHERE (LOWER("tags"."name") ILIKE 'yoga' ESCAPE '!')))[0m
+  ↳ app/controllers/api/v1/user_controller.rb:29:in `find'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.5ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:29:in `find'
+  [1m[36mActsAsTaggableOn::Tag Load (7.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:29:in `find'
+  [1m[36mActsAsTaggableOn::Tag Load (1.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:29:in `find'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.6ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:29:in `find'
+  [1m[36mActsAsTaggableOn::Tag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:29:in `find'
+  [1m[36mActsAsTaggableOn::Tag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:29:in `find'
+Completed 200 OK in 116ms (Views: 52.7ms | ActiveRecord: 49.0ms | Allocations: 35016)
+
+
+Started GET "/api/v1/find_matches?filtered_interests=Yoga" for ::1 at 2020-01-09 13:49:28 -0800
+Processing by Api::V1::UserController#find as */*
+  Parameters: {"filtered_interests"=>"Yoga"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/user_controller.rb:41:in `set_user'
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE EXISTS (SELECT * FROM "taggings" WHERE "taggings"."taggable_id" = "users"."id" AND "taggings"."taggable_type" = 'User' AND "taggings"."tag_id" IN (SELECT "tags"."id" FROM "tags" WHERE (LOWER("tags"."name") ILIKE 'yoga' ESCAPE '!')))[0m
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+  [1m[36mActsAsTaggableOn::Tagging Load (7.8ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+  [1m[36mActsAsTaggableOn::Tag Load (2.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+  [1m[36mActsAsTaggableOn::Tag Load (2.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.7ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+  [1m[36mActsAsTaggableOn::Tag Load (1.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+  [1m[36mActsAsTaggableOn::Tag Load (1.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+Completed 200 OK in 83ms (Views: 0.3ms | ActiveRecord: 24.3ms | Allocations: 21892)
+
+
+Started GET "/api/v1/find_matches?filtered_interests=Yoga" for ::1 at 2020-01-09 13:50:16 -0800
+Processing by Api::V1::UserController#find as */*
+  Parameters: {"filtered_interests"=>"Yoga"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/user_controller.rb:41:in `set_user'
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE EXISTS (SELECT * FROM "taggings" WHERE "taggings"."taggable_id" = "users"."id" AND "taggings"."taggable_type" = 'User' AND "taggings"."tag_id" IN (SELECT "tags"."id" FROM "tags" WHERE (LOWER("tags"."name") ILIKE 'yoga' ESCAPE '!')))[0m
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.7ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+  [1m[36mActsAsTaggableOn::Tag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.7ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+  [1m[36mActsAsTaggableOn::Tag Load (1.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+  [1m[36mActsAsTaggableOn::Tag Load (2.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+Completed 200 OK in 78ms (Views: 0.5ms | ActiveRecord: 22.1ms | Allocations: 21995)
+
+
+Started GET "/api/v1/find_matches?filtered_interests=Yoga" for ::1 at 2020-01-09 13:50:46 -0800
+Processing by Api::V1::UserController#find as */*
+  Parameters: {"filtered_interests"=>"Yoga"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/user_controller.rb:41:in `set_user'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE EXISTS (SELECT * FROM "taggings" WHERE "taggings"."taggable_id" = "users"."id" AND "taggings"."taggable_type" = 'User' AND "taggings"."tag_id" IN (SELECT "tags"."id" FROM "tags" WHERE (LOWER("tags"."name") ILIKE 'yoga' ESCAPE '!')))[0m
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.5ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+  [1m[36mActsAsTaggableOn::Tag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.7ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+  [1m[36mActsAsTaggableOn::Tag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+Completed 200 OK in 57ms (Views: 0.2ms | ActiveRecord: 11.4ms | Allocations: 20210)
+
+
+Started GET "/api/v1/find_matches?filtered_interests=[%22Yoga%22,%20%22Ziplining%22]" for ::1 at 2020-01-09 13:52:03 -0800
+Processing by Api::V1::UserController#find as */*
+  Parameters: {"filtered_interests"=>"[\"Yoga\", \"Ziplining\"]"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/user_controller.rb:41:in `set_user'
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE EXISTS (SELECT * FROM "taggings" WHERE "taggings"."taggable_id" = "users"."id" AND "taggings"."taggable_type" = 'User' AND "taggings"."tag_id" IN (SELECT "tags"."id" FROM "tags" WHERE (LOWER("tags"."name") ILIKE '["yoga"' ESCAPE '!' OR LOWER("tags"."name") ILIKE '"ziplining"]' ESCAPE '!')))[0m
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 2.9ms | Allocations: 1577)
+
+
+Started GET "/api/v1/find_matches?filtered_interests=Ziplining" for ::1 at 2020-01-09 13:52:27 -0800
+Processing by Api::V1::UserController#find as */*
+  Parameters: {"filtered_interests"=>"Ziplining"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/user_controller.rb:41:in `set_user'
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE EXISTS (SELECT * FROM "taggings" WHERE "taggings"."taggable_id" = "users"."id" AND "taggings"."taggable_type" = 'User' AND "taggings"."tag_id" IN (SELECT "tags"."id" FROM "tags" WHERE (LOWER("tags"."name") ILIKE 'ziplining' ESCAPE '!')))[0m
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+  [1m[36mActsAsTaggableOn::Tag Load (1.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+  [1m[36mActsAsTaggableOn::Tag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+Completed 200 OK in 30ms (Views: 0.4ms | ActiveRecord: 4.7ms | Allocations: 5711)
+
+
+Started GET "/api/v1/find_matches?filtered_interests=Yoga,%20Ziplining" for ::1 at 2020-01-09 13:52:36 -0800
+Processing by Api::V1::UserController#find as */*
+  Parameters: {"filtered_interests"=>"Yoga, Ziplining"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/user_controller.rb:41:in `set_user'
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE EXISTS (SELECT * FROM "taggings" WHERE "taggings"."taggable_id" = "users"."id" AND "taggings"."taggable_type" = 'User' AND "taggings"."tag_id" IN (SELECT "tags"."id" FROM "tags" WHERE (LOWER("tags"."name") ILIKE 'yoga' ESCAPE '!' OR LOWER("tags"."name") ILIKE 'ziplining' ESCAPE '!')))[0m
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+  [1m[36mActsAsTaggableOn::Tag Load (1.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.6ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+  [1m[36mActsAsTaggableOn::Tag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.2ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+  [1m[36mActsAsTaggableOn::Tag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+Completed 200 OK in 27ms (Views: 0.5ms | ActiveRecord: 7.2ms | Allocations: 7765)
+
+
+Started GET "/api/v1/find_matches?filtered_interests=Yoga,Ziplining" for ::1 at 2020-01-09 13:53:06 -0800
+Processing by Api::V1::UserController#find as */*
+  Parameters: {"filtered_interests"=>"Yoga,Ziplining"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/user_controller.rb:41:in `set_user'
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE EXISTS (SELECT * FROM "taggings" WHERE "taggings"."taggable_id" = "users"."id" AND "taggings"."taggable_type" = 'User' AND "taggings"."tag_id" IN (SELECT "tags"."id" FROM "tags" WHERE (LOWER("tags"."name") ILIKE 'yoga' ESCAPE '!' OR LOWER("tags"."name") ILIKE 'ziplining' ESCAPE '!')))[0m
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.2ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+  [1m[36mActsAsTaggableOn::Tag Load (3.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+  [1m[36mActsAsTaggableOn::Tag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+  [1m[36mActsAsTaggableOn::Tag Load (1.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+Completed 200 OK in 28ms (Views: 0.3ms | ActiveRecord: 9.6ms | Allocations: 7764)
+
+
+Started GET "/api/v1/find_exact_matches?filtered_interests=Yoga,Ziplining" for ::1 at 2020-01-09 13:58:35 -0800
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UserController#find_exact as */*
+  Parameters: {"filtered_interests"=>"Yoga,Ziplining"}
+  [1m[36mUser Load (7.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "tags" WHERE (LOWER("tags"."name") ILIKE 'yoga' ESCAPE '!' OR LOWER("tags"."name") ILIKE 'ziplining' ESCAPE '!')[0m
+  ↳ app/controllers/api/v1/user_controller.rb:35:in `find_exact'
+  [1m[36mUser Load (13.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "taggings" "user_taggings_b4284e4" ON "user_taggings_b4284e4"."taggable_id" = "users"."id" AND "user_taggings_b4284e4"."taggable_type" = 'User' AND "user_taggings_b4284e4"."tag_id" IN (SELECT "tags"."id" FROM "tags" WHERE LOWER("tags"."name") ILIKE 'yoga' ESCAPE '!') INNER JOIN "taggings" "user_taggings_ec599df" ON "user_taggings_ec599df"."taggable_id" = "users"."id" AND "user_taggings_ec599df"."taggable_type" = 'User' AND "user_taggings_ec599df"."tag_id" IN (SELECT "tags"."id" FROM "tags" WHERE LOWER("tags"."name") ILIKE 'ziplining' ESCAPE '!') LEFT OUTER JOIN "taggings" ON "taggings"."taggable_id" = "users"."id" AND "taggings"."taggable_type" = 'User' GROUP BY "users"."id" HAVING COUNT("taggings"."taggable_id") = (SELECT COUNT(*) FROM "tags" WHERE (LOWER("tags"."name") ILIKE 'yoga' ESCAPE '!' OR LOWER("tags"."name") ILIKE 'ziplining' ESCAPE '!'))[0m
+  ↳ app/controllers/api/v1/user_controller.rb:37:in `find_exact'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:37:in `find_exact'
+  [1m[36mActsAsTaggableOn::Tag Load (1.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:37:in `find_exact'
+Completed 200 OK in 133ms (Views: 0.3ms | ActiveRecord: 41.7ms | Allocations: 36006)
+
+
+Started GET "/api/v1/find_exact_matches?filtered_interests=Yoga" for ::1 at 2020-01-09 13:58:42 -0800
+Processing by Api::V1::UserController#find_exact as */*
+  Parameters: {"filtered_interests"=>"Yoga"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "tags" WHERE (LOWER("tags"."name") ILIKE 'yoga' ESCAPE '!')[0m
+  ↳ app/controllers/api/v1/user_controller.rb:35:in `find_exact'
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "taggings" "user_taggings_b4284e4" ON "user_taggings_b4284e4"."taggable_id" = "users"."id" AND "user_taggings_b4284e4"."taggable_type" = 'User' AND "user_taggings_b4284e4"."tag_id" IN (SELECT "tags"."id" FROM "tags" WHERE LOWER("tags"."name") ILIKE 'yoga' ESCAPE '!') LEFT OUTER JOIN "taggings" ON "taggings"."taggable_id" = "users"."id" AND "taggings"."taggable_type" = 'User' GROUP BY "users"."id" HAVING COUNT("taggings"."taggable_id") = (SELECT COUNT(*) FROM "tags" WHERE (LOWER("tags"."name") ILIKE 'yoga' ESCAPE '!'))[0m
+  ↳ app/controllers/api/v1/user_controller.rb:37:in `find_exact'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.5ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:37:in `find_exact'
+  [1m[36mActsAsTaggableOn::Tag Load (1.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/user_controller.rb:37:in `find_exact'
+Completed 200 OK in 18ms (Views: 0.3ms | ActiveRecord: 5.8ms | Allocations: 3602)
+
+
+Started GET "/api/v1/find_exact_matches?filtered_interests=Yoga" for ::1 at 2020-01-09 14:07:47 -0800
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (undefined method `order' for Api::V1::UserController:Class):
+  
+app/controllers/api/v1/user_controller.rb:3:in `<class:UserController>'
+app/controllers/api/v1/user_controller.rb:1:in `<main>'
+Started GET "/api/v1/find_matches?filtered_interests=Yoga" for ::1 at 2020-01-09 14:07:55 -0800
+  
+ActionController::RoutingError (undefined method `order' for Api::V1::UserController:Class):
+  
+app/controllers/api/v1/user_controller.rb:3:in `<class:UserController>'
+app/controllers/api/v1/user_controller.rb:1:in `<main>'
+Started GET "/api/v1/find_matches?filtered_interests=Yoga" for ::1 at 2020-01-09 14:10:31 -0800
+  
+ActionController::RoutingError (undefined method `scope' for Api::V1::UserController:Class):
+  
+app/controllers/api/v1/user_controller.rb:3:in `<class:UserController>'
+app/controllers/api/v1/user_controller.rb:1:in `<main>'
+Started GET "/api/v1/find_matches?filtered_interests=Yoga" for ::1 at 2020-01-09 14:11:45 -0800
+Processing by Api::V1::UserController#find as */*
+  Parameters: {"filtered_interests"=>"Yoga"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/user_controller.rb:48:in `set_user'
+  [1m[36mUser Load (27.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE EXISTS (SELECT * FROM "taggings" WHERE "taggings"."taggable_id" = "users"."id" AND "taggings"."taggable_type" = 'User' AND "taggings"."tag_id" IN (SELECT "tags"."id" FROM "tags" WHERE (LOWER("tags"."name") ILIKE 'yoga' ESCAPE '!'))) ORDER BY "interest_list" DESC[0m
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+Completed 500 Internal Server Error in 93ms (ActiveRecord: 44.0ms | Allocations: 16224)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column "interest_list" does not exist
+LINE 1: ...tags"."name") ILIKE 'yoga' ESCAPE '!'))) ORDER BY "interest_...
+                                                             ^
+):
+  
+app/controllers/api/v1/user_controller.rb:30:in `find'
+Started GET "/api/v1/find_matches?filtered_interests=Yoga" for ::1 at 2020-01-09 14:12:04 -0800
+Processing by Api::V1::UserController#find as */*
+  Parameters: {"filtered_interests"=>"Yoga"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/user_controller.rb:48:in `set_user'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE EXISTS (SELECT * FROM "taggings" WHERE "taggings"."taggable_id" = "users"."id" AND "taggings"."taggable_type" = 'User' AND "taggings"."tag_id" IN (SELECT "tags"."id" FROM "tags" WHERE (LOWER("tags"."name") ILIKE 'yoga' ESCAPE '!'))) ORDER BY "interests" DESC[0m
+  ↳ app/controllers/api/v1/user_controller.rb:30:in `find'
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 8.5ms | Allocations: 9502)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column "interests" does not exist
+LINE 1: ...tags"."name") ILIKE 'yoga' ESCAPE '!'))) ORDER BY "interests...
+                                                             ^
+):
+  
+app/controllers/api/v1/user_controller.rb:30:in `find'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "interest_list" DESC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."first_name" DESC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."first_name" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (2.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3 LIMIT $4[0m  [["taggable_id", 3], ["taggable_type", "User"], ["context", "interests"], ["LIMIT", 11]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.5ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  [1m[36mUser Load (7.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "interests" ASC LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/api/v1/find_matches?filtered_interests=Yoga" for ::1 at 2020-01-09 14:27:10 -0800
+  [1m[35m (13.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UserController#find as */*
+  Parameters: {"filtered_interests"=>"Yoga"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/user_controller.rb:49:in `set_user'
+Completed 500 Internal Server Error in 167ms (ActiveRecord: 9.7ms | Allocations: 54527)
+
+
+  
+NoMethodError (undefined method `sort_users' for #<Api::V1::UserController:0x00007f83c42d9638>
+Did you mean?  set_user):
+  
+app/controllers/api/v1/user_controller.rb:29:in `find'
+Started GET "/api/v1/find_matches?filtered_interests=Yoga" for ::1 at 2020-01-09 14:27:47 -0800
+Processing by Api::V1::UserController#find as */*
+  Parameters: {"filtered_interests"=>"Yoga"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/user_controller.rb:49:in `set_user'
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 7.7ms | Allocations: 11241)
+
+
+  
+NoMethodError (undefined method `sort_users' for #<Class:0x00007f83c4d79e30>):
+  
+app/controllers/api/v1/user_controller.rb:29:in `find'
+Started GET "/api/v1/find_matches?filtered_interests=Yoga" for ::1 at 2020-01-09 14:29:39 -0800
+Processing by Api::V1::UserController#find as */*
+  Parameters: {"filtered_interests"=>"Yoga"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/user_controller.rb:49:in `set_user'
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE EXISTS (SELECT * FROM "taggings" WHERE "taggings"."taggable_id" = "users"."id" AND "taggings"."taggable_type" = 'User' AND "taggings"."tag_id" IN (SELECT "tags"."id" FROM "tags" WHERE (LOWER("tags"."name") ILIKE 'yoga' ESCAPE '!')))[0m
+  ↳ app/models/user.rb:8:in `sort_by'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.5ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (1.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.8ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+Completed 200 OK in 109ms (Views: 0.3ms | ActiveRecord: 31.5ms | Allocations: 31570)
+
+
+Started GET "/api/v1/find_matches?filtered_interests=Yoga,Ziplining" for ::1 at 2020-01-09 14:30:00 -0800
+Processing by Api::V1::UserController#find as */*
+  Parameters: {"filtered_interests"=>"Yoga,Ziplining"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/user_controller.rb:49:in `set_user'
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE EXISTS (SELECT * FROM "taggings" WHERE "taggings"."taggable_id" = "users"."id" AND "taggings"."taggable_type" = 'User' AND "taggings"."tag_id" IN (SELECT "tags"."id" FROM "tags" WHERE (LOWER("tags"."name") ILIKE 'yoga' ESCAPE '!' OR LOWER("tags"."name") ILIKE 'ziplining' ESCAPE '!')))[0m
+  ↳ app/models/user.rb:8:in `sort_by'
+  [1m[36mActsAsTaggableOn::Tagging Load (1.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (1.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.6ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.5ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+Completed 200 OK in 48ms (Views: 0.3ms | ActiveRecord: 8.4ms | Allocations: 7345)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mActsAsTaggableOn::Tagging Load (1.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (1.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.5ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mActsAsTaggableOn::Tagging Load (1.4ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (1.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.5ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+Started GET "/api/v1/find_matches?filtered_interests=Yoga,Ziplining" for ::1 at 2020-01-09 14:35:32 -0800
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UserController#find as */*
+  Parameters: {"filtered_interests"=>"Yoga,Ziplining"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/user_controller.rb:49:in `set_user'
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE EXISTS (SELECT * FROM "taggings" WHERE "taggings"."taggable_id" = "users"."id" AND "taggings"."taggable_type" = 'User' AND "taggings"."tag_id" IN (SELECT "tags"."id" FROM "tags" WHERE (LOWER("tags"."name") ILIKE 'yoga' ESCAPE '!' OR LOWER("tags"."name") ILIKE 'ziplining' ESCAPE '!')))[0m
+  ↳ app/models/user.rb:8:in `sort_by'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.5ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.5ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (1.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+Completed 200 OK in 143ms (Views: 0.3ms | ActiveRecord: 30.2ms | Allocations: 39554)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-09 14:39:26 -0800
+  
+ActionController::RoutingError (uninitialized constant Api::V1::UsersController
+Did you mean?  Api::V1::UserController):
+  
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:284:in `const_get'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:284:in `block in constantize'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.2.1) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.2.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:45:in `controller'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.8) lib/rack/etag.rb:25:in `call'
+rack (2.0.8) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.8) lib/rack/head.rb:12:in `call'
+activerecord (6.0.2.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/user" for ::1 at 2020-01-09 14:39:32 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/user"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/users" for ::1 at 2020-01-09 14:39:36 -0800
+  
+ActionController::RoutingError (uninitialized constant Api::V1::UsersController
+Did you mean?  Api::V1::UserController):
+  
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:284:in `const_get'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:284:in `block in constantize'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.2.1) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.2.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:45:in `controller'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.8) lib/rack/etag.rb:25:in `call'
+rack (2.0.8) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.8) lib/rack/head.rb:12:in `call'
+activerecord (6.0.2.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/users" for ::1 at 2020-01-09 14:42:11 -0800
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+  [1m[36mActsAsTaggableOn::Tagging Load (1.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+  [1m[36mActsAsTaggableOn::Tag Load (1.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+  [1m[36mActsAsTaggableOn::Tag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.5ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+  [1m[36mActsAsTaggableOn::Tag Load (1.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+  [1m[36mActsAsTaggableOn::Tag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.5ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+  [1m[36mActsAsTaggableOn::Tag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+  [1m[36mActsAsTaggableOn::Tag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+Completed 200 OK in 140ms (Views: 78.3ms | ActiveRecord: 29.9ms | Allocations: 43258)
+
+
+Started POST "/api/v1/users?first_name=Alfonso&last_name=Pruneda&email=alfonso.pru@gmail.com&password=[FILTERED]&confirm_password=[FILTERED]&interest_list=Tennis" for ::1 at 2020-01-09 14:43:53 -0800
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"first_name"=>"Alfonso", "last_name"=>"Pruneda", "email"=>"alfonso.pru@gmail.com", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "interest_list"=>"Tennis"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 134)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:45:in `user_params'
+app/controllers/api/v1/users_controller.rb:14:in `create'
+Started POST "/api/v1/users?first_name=Alfonso&last_name=Pruneda&email=alfonso.pru@gmail.com&password=[FILTERED]&interest_list=Tennis" for ::1 at 2020-01-09 14:44:57 -0800
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"first_name"=>"Alfonso", "last_name"=>"Pruneda", "email"=>"alfonso.pru@gmail.com", "password"=>"[FILTERED]", "interest_list"=>"Tennis"}
+Completed 400 Bad Request in 17ms (ActiveRecord: 0.0ms | Allocations: 7231)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:38:in `user_params'
+app/controllers/api/v1/users_controller.rb:14:in `create'
+Started POST "/api/v1/users?first_name=Alfonso&last_name=Pruneda&email=alfonso.pru@gmail.com&password_digest=[FILTERED]&interest_list=Tennis" for ::1 at 2020-01-09 14:45:05 -0800
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"first_name"=>"Alfonso", "last_name"=>"Pruneda", "email"=>"alfonso.pru@gmail.com", "password_digest"=>"[FILTERED]", "interest_list"=>"Tennis"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 124)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:38:in `user_params'
+app/controllers/api/v1/users_controller.rb:14:in `create'
+Started POST "/api/v1/users?first_name=Alfonso&last_name=Pruneda&email=alfonso.pru@gmail.com&password_digest=[FILTERED]&bio=this%20is%20my%20bio&interest_list=Tennis&ideal_friend_bio=I%20want%20a%20friend" for ::1 at 2020-01-09 14:47:50 -0800
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"first_name"=>"Alfonso", "last_name"=>"Pruneda", "email"=>"alfonso.pru@gmail.com", "password_digest"=>"[FILTERED]", "bio"=>"this is my bio", "interest_list"=>"Tennis", "ideal_friend_bio"=>"I want a friend"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 126)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:38:in `user_params'
+app/controllers/api/v1/users_controller.rb:14:in `create'
+Started POST "/api/v1/users?first_name=Alfonso&last_name=Pruneda&email=alfonso.pru@gmail.com&password_digest=[FILTERED]&bio=this%20is%20my%20bio&interest_list=Tennis&ideal_friend_bio=I%20want%20a%20friend&username=915fonzie" for ::1 at 2020-01-09 14:51:24 -0800
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"first_name"=>"Alfonso", "last_name"=>"Pruneda", "email"=>"alfonso.pru@gmail.com", "password_digest"=>"[FILTERED]", "bio"=>"this is my bio", "interest_list"=>"Tennis", "ideal_friend_bio"=>"I want a friend", "username"=>"915fonzie"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 125)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:38:in `user_params'
+app/controllers/api/v1/users_controller.rb:14:in `create'
+Started POST "/api/v1/users?first_name=Alfonso&last_name=Pruneda&email=alfonso.pru@gmail.com&password=[FILTERED]&bio=this%20is%20my%20bio&interest_list=Tennis&ideal_friend_bio=I%20want%20a%20friend&username=915fonzie&password_confirmation=[FILTERED]" for ::1 at 2020-01-09 14:51:52 -0800
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"first_name"=>"Alfonso", "last_name"=>"Pruneda", "email"=>"alfonso.pru@gmail.com", "password"=>"[FILTERED]", "bio"=>"this is my bio", "interest_list"=>"Tennis", "ideal_friend_bio"=>"I want a friend", "username"=>"915fonzie", "password_confirmation"=>"[FILTERED]"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 126)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:38:in `user_params'
+app/controllers/api/v1/users_controller.rb:14:in `create'
+Started POST "/api/v1/users?first_name=Alfonso&last_name=Pruneda&email=alfonso.pru@gmail.com&password_digest=[FILTERED]&bio=this%20is%20my%20bio&interest_list=Tennis&ideal_friend_bio=I%20want%20a%20friend&username=915fonzie" for ::1 at 2020-01-09 14:53:13 -0800
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"first_name"=>"Alfonso", "last_name"=>"Pruneda", "email"=>"alfonso.pru@gmail.com", "password_digest"=>"[FILTERED]", "bio"=>"this is my bio", "interest_list"=>"Tennis", "ideal_friend_bio"=>"I want a friend", "username"=>"915fonzie"}
+Completed 400 Bad Request in 14ms (ActiveRecord: 0.0ms | Allocations: 7234)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:38:in `user_params'
+app/controllers/api/v1/users_controller.rb:14:in `create'
+Started POST "/api/v1/users?first_name=Alfonso&last_name=Pruneda&email=alfonso.pru@gmail.com&password=[FILTERED]&bio=this%20is%20my%20bio&interest_list=Tennis&ideal_friend_bio=I%20want%20a%20friend&username=915fonzie&password_confirmation=[FILTERED]" for ::1 at 2020-01-09 14:53:27 -0800
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"first_name"=>"Alfonso", "last_name"=>"Pruneda", "email"=>"alfonso.pru@gmail.com", "password"=>"[FILTERED]", "bio"=>"this is my bio", "interest_list"=>"Tennis", "ideal_friend_bio"=>"I want a friend", "username"=>"915fonzie", "password_confirmation"=>"[FILTERED]"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 126)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:38:in `user_params'
+app/controllers/api/v1/users_controller.rb:14:in `create'
+Started POST "/api/v1/users?first_name=Alfonso&last_name=Pruneda&email=alfonso.pru@gmail.com&password=[FILTERED]&bio=this%20is%20my%20bio&interest_list=Tennis&ideal_friend_bio=I%20want%20a%20friend&username=915fonzie&password_confirmation=[FILTERED]" for ::1 at 2020-01-09 14:57:34 -0800
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"first_name"=>"Alfonso", "last_name"=>"Pruneda", "email"=>"alfonso.pru@gmail.com", "password"=>"[FILTERED]", "bio"=>"this is my bio", "interest_list"=>"Tennis", "ideal_friend_bio"=>"I want a friend", "username"=>"915fonzie", "password_confirmation"=>"[FILTERED]"}
+Completed 400 Bad Request in 17ms (ActiveRecord: 0.0ms | Allocations: 7237)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:39:in `user_params'
+app/controllers/api/v1/users_controller.rb:15:in `create'
+Started POST "/api/v1/users?first_name=Alfonso&last_name=Pruneda&email=alfonso.pru@gmail.com&password_digest=[FILTERED]&bio=this%20is%20my%20bio&interest_list=Tennis&ideal_friend_bio=I%20want%20a%20friend&username=915fonzie" for ::1 at 2020-01-09 14:58:06 -0800
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"first_name"=>"Alfonso", "last_name"=>"Pruneda", "email"=>"alfonso.pru@gmail.com", "password_digest"=>"[FILTERED]", "bio"=>"this is my bio", "interest_list"=>"Tennis", "ideal_friend_bio"=>"I want a friend", "username"=>"915fonzie"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 125)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:39:in `user_params'
+app/controllers/api/v1/users_controller.rb:15:in `create'
+Started POST "/api/v1/users?first_name=Alfonso&last_name=Pruneda&email=alfonso.pru@gmail.com&password=[FILTERED]&bio=this%20is%20my%20bio&interest_list=Tennis&ideal_friend_bio=I%20want%20a%20friend&username=915fonzie&password_confirmation=[FILTERED]" for ::1 at 2020-01-09 14:58:29 -0800
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"first_name"=>"Alfonso", "last_name"=>"Pruneda", "email"=>"alfonso.pru@gmail.com", "password"=>"[FILTERED]", "bio"=>"this is my bio", "interest_list"=>"Tennis", "ideal_friend_bio"=>"I want a friend", "username"=>"915fonzie", "password_confirmation"=>"[FILTERED]"}
+Completed 400 Bad Request in 20ms (ActiveRecord: 0.0ms | Allocations: 7235)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:39:in `user_params'
+app/controllers/api/v1/users_controller.rb:15:in `create'
+Started POST "/api/v1/users?first_name=Alfonso&last_name=Pruneda&email=alfonso.pru@gmail.com&password=[FILTERED]&bio=this%20is%20my%20bio&interest_list=Tennis&ideal_friend_bio=I%20want%20a%20friend&username=915fonzie" for ::1 at 2020-01-09 14:58:36 -0800
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"first_name"=>"Alfonso", "last_name"=>"Pruneda", "email"=>"alfonso.pru@gmail.com", "password"=>"[FILTERED]", "bio"=>"this is my bio", "interest_list"=>"Tennis", "ideal_friend_bio"=>"I want a friend", "username"=>"915fonzie"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 125)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:39:in `user_params'
+app/controllers/api/v1/users_controller.rb:15:in `create'
+Started POST "/api/v1/users?first_name=Alfonso&last_name=Pruneda&username=915fonzie&email=alfonso.pru@gmail.com&password=[FILTERED]&bio=this%20is%20my%20bio&ideal_friend_bio=I%20want%20a%20friend&interest_list=Tennis" for ::1 at 2020-01-09 14:59:06 -0800
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"first_name"=>"Alfonso", "last_name"=>"Pruneda", "username"=>"915fonzie", "email"=>"alfonso.pru@gmail.com", "password"=>"[FILTERED]", "bio"=>"this is my bio", "ideal_friend_bio"=>"I want a friend", "interest_list"=>"Tennis"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 127)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:39:in `user_params'
+app/controllers/api/v1/users_controller.rb:15:in `create'
+Started POST "/api/v1/users?first_name=Alfonso&last_name=Pruneda&username=915fonzie&email=alfonso.pru@gmail.com&password=[FILTERED]&bio=this%20is%20my%20bio&ideal_friend_bio=I%20want%20a%20friend&interest_list=Tennis" for ::1 at 2020-01-09 15:02:30 -0800
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"first_name"=>"Alfonso", "last_name"=>"Pruneda", "username"=>"915fonzie", "email"=>"alfonso.pru@gmail.com", "password"=>"[FILTERED]", "bio"=>"this is my bio", "ideal_friend_bio"=>"I want a friend", "interest_list"=>"Tennis"}
+Completed 400 Bad Request in 17ms (ActiveRecord: 0.0ms | Allocations: 7234)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:47:in `create_user_params'
+app/controllers/api/v1/users_controller.rb:15:in `create'
+Started POST "/api/v1/users?first_name=Alfonso&last_name=Pruneda&username=915fonzie&email=alfonso.pru@gmail.com&password=[FILTERED]&bio=this%20is%20my%20bio&ideal_friend_bio=I%20want%20a%20friend&interest_list=Tennis" for ::1 at 2020-01-09 15:02:40 -0800
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"first_name"=>"Alfonso", "last_name"=>"Pruneda", "username"=>"915fonzie", "email"=>"alfonso.pru@gmail.com", "password"=>"[FILTERED]", "bio"=>"this is my bio", "ideal_friend_bio"=>"I want a friend", "interest_list"=>"Tennis"}
+Completed 400 Bad Request in 28ms (ActiveRecord: 0.0ms | Allocations: 10098)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:47:in `create_user_params'
+app/controllers/api/v1/users_controller.rb:15:in `create'
+Started POST "/api/v1/users?user=%20%7B&first_name=%20alfonso&last_name=%20Pruneda&email=%20alfonso.pru@gmail.com&password=[FILTERED]&interest_list=%20Tennis&bio=%20bio%20stuff&ideal_friend_bio=%20friend%20stuff&username=%20915fonzie&%7D=" for ::1 at 2020-01-09 15:05:15 -0800
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>" {", "first_name"=>" alfonso", "last_name"=>" Pruneda", "email"=>" alfonso.pru@gmail.com", "password"=>"[FILTERED]", "interest_list"=>" Tennis", "bio"=>" bio stuff", "ideal_friend_bio"=>" friend stuff", "username"=>" 915fonzie", "}"=>""}
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms | Allocations: 8120)
+
+
+  
+NoMethodError (undefined method `permit' for " {":String):
+  
+app/controllers/api/v1/users_controller.rb:39:in `user_params'
+app/controllers/api/v1/users_controller.rb:15:in `create'
+Started POST "/api/v1/users?user=%20[&first_name=%20alfonso&last_name=%20Pruneda&email=%20alfonso.pru@gmail.com&password=[FILTERED]&interest_list=%20Tennis&bio=%20bio%20stuff&ideal_friend_bio=%20friend%20stuff&username=%20915fonzie&]=" for ::1 at 2020-01-09 15:05:46 -0800
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>" [", "first_name"=>" alfonso", "last_name"=>" Pruneda", "email"=>" alfonso.pru@gmail.com", "password"=>"[FILTERED]", "interest_list"=>" Tennis", "bio"=>" bio stuff", "ideal_friend_bio"=>" friend stuff", "username"=>" 915fonzie"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1003)
+
+
+  
+NoMethodError (undefined method `permit' for " [":String):
+  
+app/controllers/api/v1/users_controller.rb:39:in `user_params'
+app/controllers/api/v1/users_controller.rb:15:in `create'
+Started GET "/api/v1/users" for ::1 at 2020-01-09 15:07:01 -0800
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mActsAsTaggableOn::Tagging Load (1.6ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mActsAsTaggableOn::Tag Load (1.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mActsAsTaggableOn::Tag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mActsAsTaggableOn::Tag Load (1.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mActsAsTaggableOn::Tag Load (1.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.5ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mActsAsTaggableOn::Tag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mActsAsTaggableOn::Tag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+Completed 200 OK in 141ms (Views: 100.3ms | ActiveRecord: 39.9ms | Allocations: 35265)
+
+
+Started POST "/api/v1/users?user[first_name]=tester" for ::1 at 2020-01-09 15:08:23 -0800
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"first_name"=>"tester"}}
+Completed 200 OK in 26ms (Views: 17.8ms | ActiveRecord: 0.0ms | Allocations: 4770)
+
+
+Started POST "/api/v1/users?user[first_name]=tester&user[last_name]=&user[email]=&user[username]=&user[pasword]=&user[interest_list]=Tennis,%20Yoga,%20Ziplining" for ::1 at 2020-01-09 15:10:25 -0800
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"first_name"=>"tester", "last_name"=>"", "email"=>"", "username"=>"", "pasword"=>"", "interest_list"=>"Tennis, Yoga, Ziplining"}}
+[31mUnpermitted parameter: :pasword[0m
+Completed 200 OK in 22ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 3797)
+
+
+Started POST "/api/v1/users?user[first_name]=tester&user[last_name]=&user[email]=&user[username]=&user[password]=&user[interest_list]=Tennis,%20Yoga,%20Ziplining" for ::1 at 2020-01-09 15:10:34 -0800
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"first_name"=>"tester", "last_name"=>"", "email"=>"", "username"=>"", "password"=>"[FILTERED]", "interest_list"=>"Tennis, Yoga, Ziplining"}}
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 1676)
+
+
+Started POST "/api/v1/users?user[first_name]=Alfonso&user[last_name]=Pruneda&user[email]=alfonso.pru@gmail.com&user[username]=915fonzie&user[password]=[FILTERED]&user[interest_list]=Tennis,Yoga,Ziplining,Swimming" for ::1 at 2020-01-09 15:11:45 -0800
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"first_name"=>"Alfonso", "last_name"=>"Pruneda", "email"=>"alfonso.pru@gmail.com", "username"=>"915fonzie", "password"=>"[FILTERED]", "interest_list"=>"Tennis,Yoga,Ziplining,Swimming"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mUser Create (4.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Alfonso"], ["last_name", "Pruneda"], ["username", "915fonzie"], ["password_digest", "$2a$12$BzT/yMyoOGYTmAdkQo4YxuG1lUfpOl4/NqT8FCDoPYJGgD98RtNoS"], ["email", "alfonso.pru@gmail.com"], ["created_at", "2020-01-09 23:11:45.424234"], ["updated_at", "2020-01-09 23:11:45.424234"]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tag Load (1.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE (LOWER(name) = LOWER('tennis') OR LOWER(name) = LOWER('yoga') OR LOWER(name) = LOWER('ziplining') OR LOWER(name) = LOWER('swimming'))[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tag Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" WHERE "tags"."name" = $1 LIMIT $2[0m  [["name", "Tennis"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tag Create (1.2ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Tennis"], ["created_at", "2020-01-09 23:11:45.440075"], ["updated_at", "2020-01-09 23:11:45.440075"]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tag Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" WHERE "tags"."name" = $1 LIMIT $2[0m  [["name", "Swimming"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tag Create (0.4ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Swimming"], ["created_at", "2020-01-09 23:11:45.445621"], ["updated_at", "2020-01-09 23:11:45.445621"]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 6], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tagging Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "taggings" WHERE "taggings"."tag_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."taggable_id" = $3 AND "taggings"."context" = $4 AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL LIMIT $5[0m  [["tag_id", 3], ["taggable_type", "User"], ["taggable_id", 6], ["context", "interests"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tagging Create (9.9ms)[0m  [1m[32mINSERT INTO "taggings" ("tag_id", "taggable_type", "taggable_id", "context", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["tag_id", 3], ["taggable_type", "User"], ["taggable_id", 6], ["context", "interests"], ["created_at", "2020-01-09 23:11:45.458529"]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tag Update All (1.2ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + $1 WHERE "tags"."id" = $2[0m  [["taggings_count", 1], ["id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tagging Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "taggings" WHERE "taggings"."tag_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."taggable_id" = $3 AND "taggings"."context" = $4 AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL LIMIT $5[0m  [["tag_id", 1], ["taggable_type", "User"], ["taggable_id", 6], ["context", "interests"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tagging Create (0.6ms)[0m  [1m[32mINSERT INTO "taggings" ("tag_id", "taggable_type", "taggable_id", "context", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["tag_id", 1], ["taggable_type", "User"], ["taggable_id", 6], ["context", "interests"], ["created_at", "2020-01-09 23:11:45.479721"]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tag Update All (0.8ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + $1 WHERE "tags"."id" = $2[0m  [["taggings_count", 1], ["id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tagging Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "taggings" WHERE "taggings"."tag_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."taggable_id" = $3 AND "taggings"."context" = $4 AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL LIMIT $5[0m  [["tag_id", 2], ["taggable_type", "User"], ["taggable_id", 6], ["context", "interests"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tagging Create (2.1ms)[0m  [1m[32mINSERT INTO "taggings" ("tag_id", "taggable_type", "taggable_id", "context", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["tag_id", 2], ["taggable_type", "User"], ["taggable_id", 6], ["context", "interests"], ["created_at", "2020-01-09 23:11:45.499178"]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tag Update All (0.6ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + $1 WHERE "tags"."id" = $2[0m  [["taggings_count", 1], ["id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tagging Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "taggings" WHERE "taggings"."tag_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."taggable_id" = $3 AND "taggings"."context" = $4 AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL LIMIT $5[0m  [["tag_id", 4], ["taggable_type", "User"], ["taggable_id", 6], ["context", "interests"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tagging Create (0.8ms)[0m  [1m[32mINSERT INTO "taggings" ("tag_id", "taggable_type", "taggable_id", "context", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["tag_id", 4], ["taggable_type", "User"], ["taggable_id", 6], ["context", "interests"], ["created_at", "2020-01-09 23:11:45.511478"]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tag Update All (0.6ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + $1 WHERE "tags"."id" = $2[0m  [["taggings_count", 1], ["id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (13.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 6], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/users_controller.rb:16:in `create'
+Completed 200 OK in 383ms (Views: 2.5ms | ActiveRecord: 44.4ms | Allocations: 33328)
+
+
+Started POST "/api/v1/users?user[first_name]=Jen&user[last_name]=Duck&user[email]=jen.duck@gmail.com&user[username]=jenduck&user[password]=[FILTERED]&user[interest_list]=Tennis,Yoga" for ::1 at 2020-01-09 15:12:40 -0800
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"first_name"=>"Jen", "last_name"=>"Duck", "email"=>"jen.duck@gmail.com", "username"=>"jenduck", "password"=>"[FILTERED]", "interest_list"=>"Tennis,Yoga"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Jen"], ["last_name", "Duck"], ["username", "jenduck"], ["password_digest", "$2a$12$gQ4moh3XFaIyyervXO6Dde/lraGWPeUdpHYxIAHlwdiL6aYFr9l2C"], ["email", "jen.duck@gmail.com"], ["created_at", "2020-01-09 23:12:40.685154"], ["updated_at", "2020-01-09 23:12:40.685154"]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE (LOWER(name) = LOWER('tennis') OR LOWER(name) = LOWER('yoga'))[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 7], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tagging Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "taggings" WHERE "taggings"."tag_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."taggable_id" = $3 AND "taggings"."context" = $4 AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL LIMIT $5[0m  [["tag_id", 3], ["taggable_type", "User"], ["taggable_id", 7], ["context", "interests"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tagging Create (2.3ms)[0m  [1m[32mINSERT INTO "taggings" ("tag_id", "taggable_type", "taggable_id", "context", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["tag_id", 3], ["taggable_type", "User"], ["taggable_id", 7], ["context", "interests"], ["created_at", "2020-01-09 23:12:40.700473"]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tag Update All (0.6ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + $1 WHERE "tags"."id" = $2[0m  [["taggings_count", 1], ["id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tagging Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "taggings" WHERE "taggings"."tag_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."taggable_id" = $3 AND "taggings"."context" = $4 AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL LIMIT $5[0m  [["tag_id", 1], ["taggable_type", "User"], ["taggable_id", 7], ["context", "interests"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tagging Create (0.7ms)[0m  [1m[32mINSERT INTO "taggings" ("tag_id", "taggable_type", "taggable_id", "context", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["tag_id", 1], ["taggable_type", "User"], ["taggable_id", 7], ["context", "interests"], ["created_at", "2020-01-09 23:12:40.711983"]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tag Update All (0.8ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + $1 WHERE "tags"."id" = $2[0m  [["taggings_count", 1], ["id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (8.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tag Load (1.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 7], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/users_controller.rb:16:in `create'
+Completed 200 OK in 325ms (Views: 2.8ms | ActiveRecord: 19.0ms | Allocations: 17142)
+
+
+Started POST "/api/v1/users?user[first_name]=Shawn&user[last_name]=Pato&user[email]=shawn.pato@gmail.com&user[username]=shawnzie&user[password]=[FILTERED]&user[interest_list]=Yoga,Ziplining,Swimming" for ::1 at 2020-01-09 15:13:17 -0800
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"first_name"=>"Shawn", "last_name"=>"Pato", "email"=>"shawn.pato@gmail.com", "username"=>"shawnzie", "password"=>"[FILTERED]", "interest_list"=>"Yoga,Ziplining,Swimming"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Shawn"], ["last_name", "Pato"], ["username", "shawnzie"], ["password_digest", "$2a$12$OUftji2FixdbfGi7J3tLw.dSUcoJYOdL6Ft.kdxLFrOqvOd/IGbkC"], ["email", "shawn.pato@gmail.com"], ["created_at", "2020-01-09 23:13:17.598569"], ["updated_at", "2020-01-09 23:13:17.598569"]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE (LOWER(name) = LOWER('yoga') OR LOWER(name) = LOWER('ziplining') OR LOWER(name) = LOWER('swimming'))[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tag Load (2.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 8], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tagging Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "taggings" WHERE "taggings"."tag_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."taggable_id" = $3 AND "taggings"."context" = $4 AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL LIMIT $5[0m  [["tag_id", 1], ["taggable_type", "User"], ["taggable_id", 8], ["context", "interests"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tagging Create (0.9ms)[0m  [1m[32mINSERT INTO "taggings" ("tag_id", "taggable_type", "taggable_id", "context", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["tag_id", 1], ["taggable_type", "User"], ["taggable_id", 8], ["context", "interests"], ["created_at", "2020-01-09 23:13:17.623649"]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tag Update All (0.6ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + $1 WHERE "tags"."id" = $2[0m  [["taggings_count", 1], ["id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tagging Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "taggings" WHERE "taggings"."tag_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."taggable_id" = $3 AND "taggings"."context" = $4 AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL LIMIT $5[0m  [["tag_id", 2], ["taggable_type", "User"], ["taggable_id", 8], ["context", "interests"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tagging Create (0.5ms)[0m  [1m[32mINSERT INTO "taggings" ("tag_id", "taggable_type", "taggable_id", "context", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["tag_id", 2], ["taggable_type", "User"], ["taggable_id", 8], ["context", "interests"], ["created_at", "2020-01-09 23:13:17.652608"]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tag Update All (0.4ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + $1 WHERE "tags"."id" = $2[0m  [["taggings_count", 1], ["id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tagging Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "taggings" WHERE "taggings"."tag_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."taggable_id" = $3 AND "taggings"."context" = $4 AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL LIMIT $5[0m  [["tag_id", 4], ["taggable_type", "User"], ["taggable_id", 8], ["context", "interests"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tagging Create (7.7ms)[0m  [1m[32mINSERT INTO "taggings" ("tag_id", "taggable_type", "taggable_id", "context", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["tag_id", 4], ["taggable_type", "User"], ["taggable_id", 8], ["context", "interests"], ["created_at", "2020-01-09 23:13:17.663986"]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tag Update All (0.5ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + $1 WHERE "tags"."id" = $2[0m  [["taggings_count", 1], ["id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mActsAsTaggableOn::Tag Load (1.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 8], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/users_controller.rb:16:in `create'
+Completed 200 OK in 363ms (Views: 3.0ms | ActiveRecord: 25.7ms | Allocations: 22564)
+
+
+Started GET "/api/v1/find_matches?filtered_interests=Yoga,Ziplining" for ::1 at 2020-01-09 15:17:35 -0800
+Processing by Api::V1::UsersController#find as */*
+  Parameters: {"filtered_interests"=>"Yoga,Ziplining"}
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE EXISTS (SELECT * FROM "taggings" WHERE "taggings"."taggable_id" = "users"."id" AND "taggings"."taggable_type" = 'User' AND "taggings"."tag_id" IN (SELECT "tags"."id" FROM "tags" WHERE (LOWER("tags"."name") ILIKE 'yoga' ESCAPE '!' OR LOWER("tags"."name") ILIKE 'ziplining' ESCAPE '!')))[0m
+  ↳ app/models/user.rb:8:in `sort_by'
+  [1m[36mActsAsTaggableOn::Tagging Load (2.5ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (1.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.9ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (2.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.7ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 8], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (1.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 8], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 7], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 7], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 6], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (1.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 6], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+Completed 200 OK in 55ms (Views: 0.4ms | ActiveRecord: 18.4ms | Allocations: 12756)
+
+
+Started GET "/api/v1/find_matches?filtered_interests=Yoga" for ::1 at 2020-01-09 15:18:12 -0800
+Processing by Api::V1::UsersController#find as */*
+  Parameters: {"filtered_interests"=>"Yoga"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE EXISTS (SELECT * FROM "taggings" WHERE "taggings"."taggable_id" = "users"."id" AND "taggings"."taggable_type" = 'User' AND "taggings"."tag_id" IN (SELECT "tags"."id" FROM "tags" WHERE (LOWER("tags"."name") ILIKE 'yoga' ESCAPE '!')))[0m
+  ↳ app/models/user.rb:8:in `sort_by'
+  [1m[36mActsAsTaggableOn::Tagging Load (2.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 8], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (2.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 8], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 7], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 7], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 6], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 6], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (1.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.2ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+Completed 200 OK in 51ms (Views: 0.4ms | ActiveRecord: 12.3ms | Allocations: 10786)
+
+
+Started GET "/api/v1/find_matches?filtered_interests=Yoga,Ziplining,Swimming" for ::1 at 2020-01-09 15:18:33 -0800
+Processing by Api::V1::UsersController#find as */*
+  Parameters: {"filtered_interests"=>"Yoga,Ziplining,Swimming"}
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE EXISTS (SELECT * FROM "taggings" WHERE "taggings"."taggable_id" = "users"."id" AND "taggings"."taggable_type" = 'User' AND "taggings"."tag_id" IN (SELECT "tags"."id" FROM "tags" WHERE (LOWER("tags"."name") ILIKE 'yoga' ESCAPE '!' OR LOWER("tags"."name") ILIKE 'ziplining' ESCAPE '!' OR LOWER("tags"."name") ILIKE 'swimming' ESCAPE '!')))[0m
+  ↳ app/models/user.rb:8:in `sort_by'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (3.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.2ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 8], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 8], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tagging Load (1.4ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 7], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 7], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 6], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 6], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+Completed 200 OK in 66ms (Views: 0.7ms | ActiveRecord: 17.3ms | Allocations: 12720)
+
+
+Started GET "/api/v1/find_matches?filtered_interests=Yoga,Ziplining,Swimming,Tennis" for ::1 at 2020-01-09 15:19:26 -0800
+Processing by Api::V1::UsersController#find as */*
+  Parameters: {"filtered_interests"=>"Yoga,Ziplining,Swimming,Tennis"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE EXISTS (SELECT * FROM "taggings" WHERE "taggings"."taggable_id" = "users"."id" AND "taggings"."taggable_type" = 'User' AND "taggings"."tag_id" IN (SELECT "tags"."id" FROM "tags" WHERE (LOWER("tags"."name") ILIKE 'yoga' ESCAPE '!' OR LOWER("tags"."name") ILIKE 'ziplining' ESCAPE '!' OR LOWER("tags"."name") ILIKE 'swimming' ESCAPE '!' OR LOWER("tags"."name") ILIKE 'tennis' ESCAPE '!')))[0m
+  ↳ app/models/user.rb:8:in `sort_by'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (1.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (1.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 5], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.2ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 8], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (1.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 8], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.2ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 7], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 7], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 6], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 6], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+Completed 200 OK in 56ms (Views: 0.4ms | ActiveRecord: 11.6ms | Allocations: 12739)
+
+
+Started GET "/api/v1/find_matches?filtered_interests=Yoga,Ziplining,Swimming,Tennis" for ::1 at 2020-01-09 15:25:02 -0800
+Processing by Api::V1::UsersController#find as */*
+  Parameters: {"filtered_interests"=>"Yoga,Ziplining,Swimming,Tennis"}
+  [1m[36mUser Load (29.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "taggings" "user_taggings_b4284e4" ON "user_taggings_b4284e4"."taggable_id" = "users"."id" AND "user_taggings_b4284e4"."taggable_type" = 'User' AND "user_taggings_b4284e4"."tag_id" IN (SELECT "tags"."id" FROM "tags" WHERE LOWER("tags"."name") ILIKE 'yoga' ESCAPE '!') INNER JOIN "taggings" "user_taggings_ec599df" ON "user_taggings_ec599df"."taggable_id" = "users"."id" AND "user_taggings_ec599df"."taggable_type" = 'User' AND "user_taggings_ec599df"."tag_id" IN (SELECT "tags"."id" FROM "tags" WHERE LOWER("tags"."name") ILIKE 'ziplining' ESCAPE '!') INNER JOIN "taggings" "user_taggings_1ea2992" ON "user_taggings_1ea2992"."taggable_id" = "users"."id" AND "user_taggings_1ea2992"."taggable_type" = 'User' AND "user_taggings_1ea2992"."tag_id" IN (SELECT "tags"."id" FROM "tags" WHERE LOWER("tags"."name") ILIKE 'swimming' ESCAPE '!') INNER JOIN "taggings" "user_taggings_c4a6b68" ON "user_taggings_c4a6b68"."taggable_id" = "users"."id" AND "user_taggings_c4a6b68"."taggable_type" = 'User' AND "user_taggings_c4a6b68"."tag_id" IN (SELECT "tags"."id" FROM "tags" WHERE LOWER("tags"."name") ILIKE 'tennis' ESCAPE '!')[0m
+  ↳ app/models/user.rb:8:in `sort_by'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.6ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 6], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 6], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+Completed 200 OK in 74ms (Views: 0.4ms | ActiveRecord: 31.6ms | Allocations: 17707)
+
+
+Started GET "/api/v1/find_matches?filtered_interests=Yoga,Ziplining,Swimming" for ::1 at 2020-01-09 15:25:09 -0800
+Processing by Api::V1::UsersController#find as */*
+  Parameters: {"filtered_interests"=>"Yoga,Ziplining,Swimming"}
+  [1m[36mUser Load (10.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "taggings" "user_taggings_b4284e4" ON "user_taggings_b4284e4"."taggable_id" = "users"."id" AND "user_taggings_b4284e4"."taggable_type" = 'User' AND "user_taggings_b4284e4"."tag_id" IN (SELECT "tags"."id" FROM "tags" WHERE LOWER("tags"."name") ILIKE 'yoga' ESCAPE '!') INNER JOIN "taggings" "user_taggings_ec599df" ON "user_taggings_ec599df"."taggable_id" = "users"."id" AND "user_taggings_ec599df"."taggable_type" = 'User' AND "user_taggings_ec599df"."tag_id" IN (SELECT "tags"."id" FROM "tags" WHERE LOWER("tags"."name") ILIKE 'ziplining' ESCAPE '!') INNER JOIN "taggings" "user_taggings_1ea2992" ON "user_taggings_1ea2992"."taggable_id" = "users"."id" AND "user_taggings_1ea2992"."taggable_type" = 'User' AND "user_taggings_1ea2992"."tag_id" IN (SELECT "tags"."id" FROM "tags" WHERE LOWER("tags"."name") ILIKE 'swimming' ESCAPE '!')[0m
+  ↳ app/models/user.rb:8:in `sort_by'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.6ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 6], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (1.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 6], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.7ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 8], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 8], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+Completed 200 OK in 30ms (Views: 0.2ms | ActiveRecord: 14.1ms | Allocations: 5163)
+
+
+Started GET "/api/v1/find_matches?filtered_interests=Yoga,Ziplining" for ::1 at 2020-01-09 15:25:20 -0800
+Processing by Api::V1::UsersController#find as */*
+  Parameters: {"filtered_interests"=>"Yoga,Ziplining"}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "taggings" "user_taggings_b4284e4" ON "user_taggings_b4284e4"."taggable_id" = "users"."id" AND "user_taggings_b4284e4"."taggable_type" = 'User' AND "user_taggings_b4284e4"."tag_id" IN (SELECT "tags"."id" FROM "tags" WHERE LOWER("tags"."name") ILIKE 'yoga' ESCAPE '!') INNER JOIN "taggings" "user_taggings_ec599df" ON "user_taggings_ec599df"."taggable_id" = "users"."id" AND "user_taggings_ec599df"."taggable_type" = 'User' AND "user_taggings_ec599df"."tag_id" IN (SELECT "tags"."id" FROM "tags" WHERE LOWER("tags"."name") ILIKE 'ziplining' ESCAPE '!')[0m
+  ↳ app/models/user.rb:8:in `sort_by'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.7ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (1.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 6], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 6], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.5ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 8], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+  [1m[36mActsAsTaggableOn::Tag Load (1.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 8], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:8:in `block in sort_users'
+Completed 200 OK in 33ms (Views: 0.3ms | ActiveRecord: 9.2ms | Allocations: 7019)
+
+

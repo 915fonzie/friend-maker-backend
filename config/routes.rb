@@ -5,6 +5,8 @@ Rails.application.routes.draw do
       resources :users
       post '/auth', to: 'auth#create'
       get '/current_user', to: 'auth#show'
+      get '/find_matches_by_greatest', to: 'users#find_from_greatest'
+      get '/find_matches_by_least', to: 'users#find_from_least'
     end
   end
 end
