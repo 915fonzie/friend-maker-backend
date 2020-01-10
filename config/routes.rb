@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :users
+      get '/interests', to: 'interests#index'
       post '/auth', to: 'auth#create'
       get '/current_user', to: 'auth#show'
       get '/find_matches_by_greatest', to: 'users#find_from_greatest'
