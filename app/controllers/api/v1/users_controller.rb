@@ -1,19 +1,18 @@
 class Api::V1::UsersController < ApplicationController
     before_action :set_user, only: [:show, :update, :destroy]
     wrap_parameters format: [:json]
-
-    def index
-        @users = User.all
-        render json: @users
-    end
-
     def show
         render json: @user
     end
 
     def create
-        @user = User.create(user_params)
-        render json: @user
+        @user = User.new(user_params)
+        if @user.valid?
+            @user.save
+            token = issue_token(@user)
+            render json: @user
+        else
+            render json: {error: "Something went wrong, try again."}
     end
 
     def update

@@ -2604,3 +2604,24 @@ Processing by Api::V1::UsersController#find_from_least as */*
 Completed 200 OK in 28ms (Views: 0.3ms | ActiveRecord: 10.2ms | Allocations: 7037)
 
 
+Started GET "/api/v1/find_matches_by_least?filtered_interests=%22Yoga%22,%22Ziplining%22" for ::1 at 2020-01-09 17:21:24 -0800
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#find_from_least as */*
+  Parameters: {"filtered_interests"=>"\"Yoga\",\"Ziplining\""}
+  [1m[36mUser Load (26.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "taggings" "user_taggings_b4284e4" ON "user_taggings_b4284e4"."taggable_id" = "users"."id" AND "user_taggings_b4284e4"."taggable_type" = 'User' AND "user_taggings_b4284e4"."tag_id" IN (SELECT "tags"."id" FROM "tags" WHERE LOWER("tags"."name") ILIKE 'yoga' ESCAPE '!') INNER JOIN "taggings" "user_taggings_ec599df" ON "user_taggings_ec599df"."taggable_id" = "users"."id" AND "user_taggings_ec599df"."taggable_type" = 'User' AND "user_taggings_ec599df"."tag_id" IN (SELECT "tags"."id" FROM "tags" WHERE LOWER("tags"."name") ILIKE 'ziplining' ESCAPE '!')[0m
+  ↳ app/models/user.rb:12:in `sort_by'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.5ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:12:in `block in sort_users_from_least'
+  [1m[36mActsAsTaggableOn::Tag Load (1.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:12:in `block in sort_users_from_least'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.5ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 6], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:12:in `block in sort_users_from_least'
+  [1m[36mActsAsTaggableOn::Tag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 6], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:12:in `block in sort_users_from_least'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 8], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:12:in `block in sort_users_from_least'
+  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 8], ["taggable_type", "User"]]
+  ↳ app/models/user.rb:12:in `block in sort_users_from_least'
+Completed 200 OK in 192ms (Views: 0.7ms | ActiveRecord: 81.5ms | Allocations: 39290)
+
+
