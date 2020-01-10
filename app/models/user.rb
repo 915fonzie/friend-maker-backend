@@ -1,6 +1,8 @@
 class User < ApplicationRecord
     acts_as_taggable
     acts_as_taggable_on :interests
+    validates :username, uniqueness: true
+    validates :email, uniqueness: true
     has_secure_password
     
 
