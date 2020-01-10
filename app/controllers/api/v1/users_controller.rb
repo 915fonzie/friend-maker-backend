@@ -10,9 +10,10 @@ class Api::V1::UsersController < ApplicationController
         if @user.valid?
             @user.save
             token = issue_token(@user)
-            render json: @user
+            render json: @user.as_json(except: :password_digest, :created_at, :updated_at, :tag_list)
         else
             render json: {error: "Something went wrong, try again."}
+        end
     end
 
     def update

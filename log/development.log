@@ -2625,3 +2625,319 @@ Processing by Api::V1::UsersController#find_from_least as */*
 Completed 200 OK in 192ms (Views: 0.7ms | ActiveRecord: 81.5ms | Allocations: 39290)
 
 
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tagging Load (26.2ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (24.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+Started POST "/api/v1/auth" for ::1 at 2020-01-10 10:03:00 -0800
+  [1m[35m (7.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"915fonzie", "password"=>"[FILTERED]", "auth"=>{"username"=>"915fonzie", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "915fonzie"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:3:in `create'
+Completed 200 OK in 338ms (Views: 0.3ms | ActiveRecord: 16.4ms | Allocations: 19184)
+
+
+Started POST "/api/v1/auth" for ::1 at 2020-01-10 10:05:55 -0800
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"915fonzie", "password"=>"[FILTERED]", "auth"=>{"username"=>"915fonzie", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (12.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "915fonzie"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:3:in `create'
+Completed 200 OK in 288ms (Views: 0.9ms | ActiveRecord: 12.6ms | Allocations: 781)
+
+
+Started POST "/api/v1/auth" for ::1 at 2020-01-10 10:07:34 -0800
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"915fonzie", "password"=>"[FILTERED]", "auth"=>{"username"=>"915fonzie", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (13.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "915fonzie"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:3:in `create'
+Completed 200 OK in 331ms (Views: 22.6ms | ActiveRecord: 13.8ms | Allocations: 780)
+
+
+Started POST "/api/v1/auth" for ::1 at 2020-01-10 10:07:53 -0800
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"915fonzie", "password"=>"[FILTERED]", "auth"=>{"username"=>"915fonzie", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (11.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "915fonzie"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:3:in `create'
+Completed 200 OK in 292ms (Views: 0.3ms | ActiveRecord: 11.9ms | Allocations: 780)
+
+
+Started POST "/api/v1/auth" for ::1 at 2020-01-10 10:12:38 -0800
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"915fonzie", "password"=>"[FILTERED]", "auth"=>{"username"=>"915fonzie", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "915fonzie"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:3:in `create'
+Completed 200 OK in 275ms (Views: 0.2ms | ActiveRecord: 2.2ms | Allocations: 781)
+
+
+Started POST "/api/v1/auth" for ::1 at 2020-01-10 10:14:13 -0800
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"915fonzie", "password"=>"[FILTERED]", "auth"=>{"username"=>"915fonzie", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "915fonzie"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:3:in `create'
+Completed 200 OK in 282ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 767)
+
+
+Started POST "/api/v1/auth" for ::1 at 2020-01-10 10:15:01 -0800
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"915fonzie", "password"=>"[FILTERED]", "auth"=>{"username"=>"915fonzie", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "915fonzie"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:3:in `create'
+Completed 200 OK in 276ms (Views: 3.9ms | ActiveRecord: 6.4ms | Allocations: 764)
+
+
+Started GET "/api/v1/current_user" for ::1 at 2020-01-10 10:41:40 -0800
+Processing by Api::V1::AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:14:in `show'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 76ms (Views: 6.2ms | ActiveRecord: 10.9ms | Allocations: 1468)
+
+
+Started GET "/api/v1/current_user" for ::1 at 2020-01-10 10:42:19 -0800
+Processing by Api::V1::AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (8.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:14:in `show'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 16ms (Views: 0.3ms | ActiveRecord: 8.4ms | Allocations: 1254)
+
+
+Started GET "/api/v1/current_user" for ::1 at 2020-01-10 10:42:21 -0800
+Processing by Api::V1::AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:14:in `show'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 1254)
+
+
+Started GET "/api/v1/current_user" for ::1 at 2020-01-10 10:44:49 -0800
+Processing by Api::V1::AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:14:in `show'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 13ms (Views: 6.5ms | ActiveRecord: 0.6ms | Allocations: 1254)
+
+
+Started GET "/api/v1/current_user" for ::1 at 2020-01-10 10:45:08 -0800
+Processing by Api::V1::AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (10.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:14:in `show'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 16ms (Views: 0.2ms | ActiveRecord: 10.2ms | Allocations: 1254)
+
+
+Started GET "/api/v1/current_user" for ::1 at 2020-01-10 10:45:11 -0800
+Processing by Api::V1::AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:14:in `show'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 2.6ms | Allocations: 1254)
+
+
+Started GET "/api/v1/current_user" for ::1 at 2020-01-10 10:45:16 -0800
+Processing by Api::V1::AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:14:in `show'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 1254)
+
+
+Started GET "/api/v1/current_user" for ::1 at 2020-01-10 10:45:24 -0800
+Processing by Api::V1::AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:14:in `show'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 14ms (Views: 1.9ms | ActiveRecord: 3.6ms | Allocations: 1254)
+
+
+Started POST "/api/v1/auth" for ::1 at 2020-01-10 11:11:50 -0800
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"915fonzie", "password"=>"[FILTERED]", "auth"=>{"username"=>"915fonzie", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "915fonzie"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:3:in `create'
+Completed 200 OK in 274ms (Views: 0.8ms | ActiveRecord: 3.4ms | Allocations: 863)
+
+
+Started GET "/api/v1/current_user" for ::1 at 2020-01-10 11:11:56 -0800
+Processing by Api::V1::AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:14:in `show'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 1260)
+
+
+Started GET "/api/v1/current_user" for ::1 at 2020-01-10 11:13:01 -0800
+Processing by Api::V1::AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:14:in `show'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 1254)
+
+
+Started GET "/api/v1/current_user" for ::1 at 2020-01-10 11:13:17 -0800
+Processing by Api::V1::AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:14:in `show'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 1254)
+
+
+Started GET "/api/v1/current_user" for ::1 at 2020-01-10 11:20:29 -0800
+Processing by Api::V1::AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:14:in `show'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 1352)
+
+
+Started GET "/api/v1/current_user" for ::1 at 2020-01-10 11:20:39 -0800
+Processing by Api::V1::AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:14:in `show'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 3.0ms | Allocations: 1254)
+
+
+Started GET "/api/v1/current_user" for ::1 at 2020-01-10 11:20:53 -0800
+Processing by Api::V1::AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (24.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:14:in `show'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 28ms (Views: 0.2ms | ActiveRecord: 24.1ms | Allocations: 1254)
+
+
+Started GET "/api/v1/current_user" for ::1 at 2020-01-10 11:22:31 -0800
+Processing by Api::V1::AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:14:in `show'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 1254)
+
+
+Started GET "/api/v1/current_user" for ::1 at 2020-01-10 11:22:41 -0800
+Processing by Api::V1::AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:14:in `show'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 1254)
+
+
+Started GET "/api/v1/current_user" for ::1 at 2020-01-10 11:23:08 -0800
+Processing by Api::V1::AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:14:in `show'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 1254)
+
+
+Started GET "/api/v1/current_user" for ::1 at 2020-01-10 11:23:24 -0800
+Processing by Api::V1::AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:14:in `show'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 5.1ms | Allocations: 1254)
+
+
+Started GET "/api/v1/current_user" for ::1 at 2020-01-10 13:15:21 -0800
+Processing by Api::V1::AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:14:in `show'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 12ms (Views: 1.2ms | ActiveRecord: 1.1ms | Allocations: 1351)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-01-10 15:17:43 -0800
+  
+SyntaxError (/Users/Fonzie/Development/code/Mod_5_Project/friend-maker-backend/app/controllers/api/v1/users_controller.rb:52: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/api/v1/users_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+app/controllers/api/v1/users_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+Started POST "/api/v1/auth" for ::1 at 2020-01-10 15:17:43 -0800
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"shawnty", "password"=>"[FILTERED]", "auth"=>{"username"=>"shawnty", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "shawnty"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:3:in `create'
+Completed 401 Unauthorized in 15ms (Views: 0.4ms | ActiveRecord: 6.6ms | Allocations: 720)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-01-10 15:18:53 -0800
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"first_name"=>"Shawn", "last_name"=>"Fernandes", "email"=>"shawn.fern@gmail.com", "username"=>"shawnty", "password"=>"[FILTERED]", "bio"=>"I'm shawn.", "ideal_friend_bio"=>"looking for other shawn's."}}
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "shawnty"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "shawn.fern@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "shawnty"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "shawn.fern@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[35m (12.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[36mUser Create (54.1ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "password_digest", "email", "bio", "ideal_friend_bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Shawn"], ["last_name", "Fernandes"], ["username", "shawnty"], ["password_digest", "$2a$12$3VQIrgFFXNEkyDkwV14Euet/pfdOZdApgsPitikooIG0vkh4NTnxK"], ["email", "shawn.fern@gmail.com"], ["bio", "I'm shawn."], ["ideal_friend_bio", "looking for other shawn's."], ["created_at", "2020-01-10 23:18:54.788871"], ["updated_at", "2020-01-10 23:18:54.788871"]]
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[36mActsAsTaggableOn::Tagging Load (5.2ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 9], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[35m (27.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[36mActsAsTaggableOn::Tag Load (25.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 9], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/users_controller.rb:13:in `create'
+  [1m[36mActsAsTaggableOn::Tag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'interests' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 9], ["taggable_type", "User"]]
+  ↳ app/controllers/api/v1/users_controller.rb:13:in `create'
+Completed 200 OK in 633ms (Views: 19.7ms | ActiveRecord: 258.5ms | Allocations: 23365)
+
+
+Started POST "/api/v1/auth" for ::1 at 2020-01-10 15:18:55 -0800
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"shawnty", "password"=>"[FILTERED]", "auth"=>{"username"=>"shawnty", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "shawnty"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:3:in `create'
+Completed 200 OK in 280ms (Views: 0.2ms | ActiveRecord: 6.3ms | Allocations: 908)
+
+
+Started POST "/api/v1/auth" for ::1 at 2020-01-10 15:19:43 -0800
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"shawnty", "password"=>"[FILTERED]", "auth"=>{"username"=>"shawnty", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "shawnty"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:3:in `create'
+Completed 200 OK in 280ms (Views: 1.7ms | ActiveRecord: 0.4ms | Allocations: 769)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "shawnty"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "shawnty"], ["LIMIT", 1]]
