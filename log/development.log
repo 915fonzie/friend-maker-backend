@@ -3073,3 +3073,20 @@ puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
 puma (4.3.1) lib/puma/server.rb:472:in `process_client'
 puma (4.3.1) lib/puma/server.rb:328:in `block in run'
 puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/interests" for ::1 at 2020-01-11 09:57:32 -0800
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/Fonzie/Development/code/Mod_5_Project/friend-maker-backend/app/controllers/api/v1/interests_controller.rb:4: syntax error, unexpected ':', expecting end
+        return json: interests
+                   ^):
+  
+app/controllers/api/v1/interests_controller.rb:4: syntax error, unexpected ':', expecting end
+app/controllers/api/v1/interests_controller.rb:4: syntax error, unexpected ':', expecting end
+Started GET "/api/v1/interests" for ::1 at 2020-01-11 09:57:56 -0800
+Processing by Api::V1::InterestsController#index as */*
+  Parameters: {"interest"=>{}}
+  [1m[36mInterest Load (25.9ms)[0m  [1m[34mSELECT "interests".* FROM "interests"[0m
+  ↳ app/controllers/api/v1/interests_controller.rb:4:in `index'
+Completed 200 OK in 113ms (Views: 75.5ms | ActiveRecord: 41.5ms | Allocations: 34217)
+
+
