@@ -315,7 +315,7 @@ Zumba
 
 all_interests_array = all_interests.split(",")
 all_interests_array.each do |interest|
-    Interest.create(name: interest)
+    Interest.create(label: interest, value: interest)
 end
 
 # user = User.new(first_name: "Alfonso", last_name: "Pruneda", username: "fonzie", password_digest: "pato", interest_list: "Yoga, Ziplining")
