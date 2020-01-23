@@ -6,7 +6,7 @@ Rails.application.routes.draw do
       get '/interests', to: 'interests#index'
       post '/auth', to: 'auth#create'
       get '/current_user', to: 'auth#show'
-      get '/find_matches_by_greatest', to: 'users#find_from_greatest'
+      post '/find_matches_by_greatest', to: 'users#find_from_greatest'
       get '/find_matches_by_least', to: 'users#find_from_least'
     end
   end

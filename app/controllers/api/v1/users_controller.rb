@@ -2,7 +2,7 @@ class Api::V1::UsersController < ApplicationController
     before_action :set_user, only: [:show, :update, :destroy]
     wrap_parameters format: [:json]
     def show
-        render json: @user
+        render json: @user.as_json(except: [:password_digest, :created_at, :updated_at, :tag_list])
     end
 
     def create
@@ -44,7 +44,7 @@ class Api::V1::UsersController < ApplicationController
     private
 
     def user_params
-        params.require(:user).permit(:first_name, :last_name, :username, :email, :password, :bio, :ideal_friend_bio, :interest_list)
+        params.require(:user).permit(:first_name, :last_name, :username, :email, :password, :bio, :ideal_friend_bio, :avatar_url, :interest_list)
     end
 
     def set_user
